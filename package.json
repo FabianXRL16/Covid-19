@@ -1,0 +1,14 @@
+{
+  "name": "covid19",
+  "version": "1.0.0",
+  "description": "Page showing the status of covid-19 worldwide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "covid-19"
+  ],
+  "author": "Fabian Pacherres",
+  "license": "MIT"
+}
