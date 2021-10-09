@@ -3,10 +3,13 @@
 
 @import './vars.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+
 body{
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 .app{
     position: relative;

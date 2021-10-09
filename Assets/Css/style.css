@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap");
 .loader {
   background-color: #dba232;
   position: absolute;
@@ -48,12 +49,71 @@
 }
 .container {
   position: absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-rows: 20% 50% 30%;
+  grid-template-areas: "nav       aside" "container aside" "footer    aside";
+}
+.container .navbar {
+  height: 100%;
+  width: 100%;
+}
+.container .navbar .navbar__content {
+  grid-area: nav;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  gap: 50px;
+  box-sizing: border-box;
+  animation: 2s navbar 0.5s ease-in;
+}
+.container .navbar .navbar__content img {
+  height: 80px;
+  width: 80px;
+}
+.container .navbar .navbar__content ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  list-style: none;
+}
+.container .navbar .navbar__content ul li a {
+  text-decoration: none;
+  color: #418fde;
+  font-weight: 400;
+}
+.container .main-content {
+  grid-area: container;
+  border: 3px solid #0fdddd;
+}
+.container .side-content {
+  grid-area: aside;
+  border: 3px solid #0fdddd;
+}
+.container .footer {
+  grid-area: footer;
+  border: 3px solid #0fdddd;
 }
 
+@keyframes navbar {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 .app {
