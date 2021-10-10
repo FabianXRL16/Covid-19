@@ -1,0 +1,11 @@
+@mixin btn($h, $w,$br: 50%, $bg: transparent, $c: #000, $b:none, $fs: 16px) {
+    height: $h;
+    width: $w;
+    border-radius: $br;
+    background-color: $bg;
+    color: $c;
+    border: $b;
+    cursor: pointer;
+    outline: none;
+    font-size: $fs;
+  }

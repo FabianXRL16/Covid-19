@@ -1,0 +1,73 @@
+@import '../vars';
+@import '../mixins';
+
+.container {
+  position: absolute;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 15% 65% 20%;
+  grid-template-areas:
+    "nav"
+    "container"
+    "footer";
+  .navbar {
+      height: 100%;
+      width: 100%;
+    .navbar__content {
+      grid-area: nav;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 100px;
+      box-sizing: border-box;
+      // animation: 2s navbar .5s ease-in;
+      img {
+        height: 80px;
+        width: 80px;
+      }
+      button{
+        @include btn($h: 50px, $w: 150px, $br: 25px, $bg: $bg-1, $c: $white, $fs: 18px);
+      }
+    }
+  }
+  .main-content {
+    grid-area: container;
+    border: 3px solid rgb(15, 221, 221);
+    .update{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      height: 40px;
+      border-radius: 20px;
+      padding-left: 5px;
+      background-color: $bg-2;
+      width: 470px;
+      color: $bg-4;
+      font-size: 14px;
+      button{
+        @include btn($h: 30px, $w: auto, $br: 15px, $bg: $bg-3, $c: $white, $fs: 14px);
+        padding: 0 15px;
+        &:hover{
+          background-color: #555555;
+        }
+      }
+    }
+  }
+  .footer {
+    grid-area: footer;
+    border: 3px solid rgb(15, 221, 221);
+  }
+}
+
+@keyframes navbar {
+    0%{
+      transform: translateY(-200px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+}
