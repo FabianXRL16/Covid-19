@@ -135,7 +135,13 @@
   }
   .footer {
     grid-area: footer;
-    border: 3px solid rgb(15, 221, 221);
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    .topInfedted{
+      display: flex;
+      gap: 50px;
+      padding-left: 10%;
+    }
   }
 }
 
