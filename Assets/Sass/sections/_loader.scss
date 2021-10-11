@@ -30,23 +30,3 @@
         }
     }
 }
-
-@keyframes loader {
-    0%, 95%{
-        opacity: 1;
-        visibility: visible;
-    }
-    100%{
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes scaling {
-    0%, 100%{
-        transform: scale(0);
-    }
-    50%{
-        transform: scale(1, 1);
-    }
-}

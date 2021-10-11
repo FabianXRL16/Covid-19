@@ -24,7 +24,7 @@
       align-items: center;
       padding: 0 10%;
       box-sizing: border-box;
-      // animation: 2s navbar .5s ease-in;
+      animation: 2s navbar .5s ease-in;
       img {
         height: 55px;
         width: 55px;
@@ -45,6 +45,7 @@
     grid-area: container;
     padding: 20px 0 0 10%;
     color: $bg-4;
+    animation: 2s mainContent .5s ease-in;
     .update {
       display: flex;
       align-items: center;
@@ -139,6 +140,7 @@
     justify-content: space-between;
     padding: 0 10%;
     position: relative;
+    animation: 2s footer .5s ease-in;
     ul {
       display: flex;
       align-items: flex-end;
@@ -236,14 +238,27 @@
         }
       }
     }
-  }
-}
-
-@keyframes navbar {
-  0% {
-    transform: translateY(-200px);
-  }
-  100% {
-    transform: translateY(0px);
+    .socialNetworks{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $bg-4;
+      button{
+        @include btn(
+          $h: auto,
+          $w: auto,
+          $br: 5px,
+          $bg: transparent,
+          $c: $white,
+          $fs: 17px
+        );
+        padding: 0;
+        transition: .3s;
+        &:hover{
+          color: $bg-2;
+          transition: .3s;
+        }
+      }
+    }
   }
 }

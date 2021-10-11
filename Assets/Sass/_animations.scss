@@ -1,0 +1,57 @@
+@keyframes loader {
+  0%,
+  95% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes scaling {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes navbar {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes mainContent {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes footer {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes circle {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

@@ -29,24 +29,6 @@
   animation-delay: 0.6s;
 }
 
-@keyframes loader {
-  0%, 95% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes scaling {
-  0%, 100% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1, 1);
-  }
-}
 .container {
   position: absolute;
   z-index: 2;
@@ -69,6 +51,7 @@
   align-items: center;
   padding: 0 10%;
   box-sizing: border-box;
+  animation: 2s navbar 0.5s ease-in;
 }
 .container .navbar .navbar__content img {
   height: 55px;
@@ -89,6 +72,7 @@
   grid-area: container;
   padding: 20px 0 0 10%;
   color: #F2F2F2;
+  animation: 2s mainContent 0.5s ease-in;
 }
 .container .main-content .update {
   display: flex;
@@ -184,6 +168,7 @@
   justify-content: space-between;
   padding: 0 10%;
   position: relative;
+  animation: 2s footer 0.5s ease-in;
 }
 .container .footer ul {
   display: flex;
@@ -276,15 +261,30 @@
 .container .footer ul li button img {
   height: 55px;
 }
-
-@keyframes navbar {
-  0% {
-    transform: translateY(-200px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.container .footer .socialNetworks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #F2F2F2;
 }
+.container .footer .socialNetworks button {
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 17px;
+  padding: 0;
+  transition: 0.3s;
+}
+.container .footer .socialNetworks button:hover {
+  color: #262626;
+  transition: 0.3s;
+}
+
 .canvas {
   height: 100vh;
   background-color: #F2F2F2;
@@ -304,6 +304,8 @@
   height: 150vh;
   background-color: #1a1a1a;
   border-radius: 50%;
+  transform: scale(1);
+  animation: 2s circle 0.5s ease-in;
 }
 .canvas .canvas__container .medium-circle {
   position: absolute;
@@ -313,6 +315,8 @@
   height: 500px;
   border-radius: 100%;
   background-color: #F2B90F;
+  transform: scale(1);
+  animation: 2s circle 0.5s ease-in;
 }
 .canvas .canvas__container .small-circle {
   position: absolute;
@@ -322,8 +326,60 @@
   height: 100px;
   border-radius: 100%;
   border: 10px solid #727272;
+  transform: scale(1);
+  animation: 2s circle 0.5s ease-in;
 }
 
+@keyframes loader {
+  0%, 95% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes scaling {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes navbar {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes mainContent {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes footer {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes circle {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
   height: 100vh;
   margin: 0;
