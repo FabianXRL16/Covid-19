@@ -116,7 +116,7 @@
   font-weight: 600;
 }
 .container .main-content .update button:hover {
-  background-color: #555555;
+  background-color: #727272;
   transition: 0.3s;
 }
 .container .main-content .title {
@@ -175,18 +175,106 @@
   transition: 0.3s;
 }
 .container .main-content .search button:hover {
-  background-color: #555555;
+  background-color: #727272;
   transition: 0.3s;
 }
 .container .footer {
   grid-area: footer;
-  display: grid;
-  grid-template-columns: 1fr 300px;
-}
-.container .footer .topInfedted {
   display: flex;
-  gap: 50px;
-  padding-left: 10%;
+  justify-content: space-between;
+  padding: 0 10%;
+  position: relative;
+}
+.container .footer ul {
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+.container .footer ul:hover li button .count {
+  background-color: #727272;
+  transition: 0.3s;
+}
+.container .footer ul:hover li:hover button .count {
+  background-color: #418fde;
+  transition: 0.3s;
+}
+.container .footer ul li {
+  position: relative;
+  width: 220px;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+.container .footer ul li:nth-child(1) {
+  padding-right: 25px;
+}
+.container .footer ul li:nth-child(1) .count {
+  left: 20px;
+}
+.container .footer ul li:nth-child(2) {
+  padding: 0 25px;
+}
+.container .footer ul li:nth-child(2) button .number {
+  left: 25px;
+}
+.container .footer ul li:nth-child(2) button .count {
+  left: 45px;
+}
+.container .footer ul li:nth-child(3) {
+  padding-left: 25px;
+}
+.container .footer ul li:nth-child(3) button .number {
+  left: 25px;
+}
+.container .footer ul li:nth-child(3) button .count {
+  left: 45px;
+}
+.container .footer ul li button {
+  height: 90%;
+  width: 220px;
+  border-radius: none;
+  background-color: transparent;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.container .footer ul li button .number {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  background-color: #F2B90F;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 30px;
+}
+.container .footer ul li button .count {
+  height: 30px;
+  width: 196px;
+  background-color: #418fde;
+  color: #F2F2F2;
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+}
+.container .footer ul li button img {
+  height: 55px;
 }
 
 @keyframes navbar {
@@ -210,8 +298,8 @@
 }
 .canvas .canvas__container .large-circle {
   position: absolute;
-  left: -350px;
-  top: -400px;
+  left: -340px;
+  top: -415px;
   width: 150vh;
   height: 150vh;
   background-color: #1a1a1a;
@@ -233,7 +321,7 @@
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  border: 10px solid #555555;
+  border: 10px solid #727272;
 }
 
 body {

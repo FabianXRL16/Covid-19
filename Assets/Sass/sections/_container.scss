@@ -125,22 +125,116 @@
           $c: $white,
           $fs: 25px
         );
-        transition: .3s;
+        transition: 0.3s;
         &:hover {
           background-color: $bg-6;
-          transition: .3s;
+          transition: 0.3s;
         }
       }
     }
   }
   .footer {
     grid-area: footer;
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    .topInfedted{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    position: relative;
+    ul {
       display: flex;
-      gap: 50px;
-      padding-left: 10%;
+      align-items: flex-end;
+      margin: 0;
+      padding: 0;
+      transition: .3s;
+      &:hover {
+        li {
+          button{
+            .count{
+              background-color: $bg-6;
+              transition: .3s;
+            }
+          }
+          &:hover {
+            button{
+              .count{
+                background-color: $bg-7;
+                transition: .3s;
+              }
+            }
+          }
+        }
+      }
+      li {
+        position: relative;
+        width: 220px;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        transition: 0.3s;
+        &:nth-child(1){
+          padding-right: 25px;
+          .count{
+            left: 20px;
+          }
+        }
+        &:nth-child(2){
+          padding: 0 25px;
+          button{
+            .number{
+              left: 25px;
+            }
+            .count{
+              left: 45px;
+            }
+          }
+        }
+        &:nth-child(3){
+          padding-left: 25px;
+          button{
+            .number{
+              left: 25px;
+            }
+            .count{
+              left: 45px;
+            }
+          }
+        }
+        button {
+          @include btn($h: 90%, $w: 220px, $br: none, $bg: transparent);
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          .number {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            height: 50px;
+            width: 50px;
+            background-color: $bg-1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            font-size: 30px;
+          }
+          .count {
+            height: 30px;
+            width: 196px;
+            background-color: $bg-7;
+            color: $bg-4;
+            position: absolute;
+            bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 15px;
+          }
+          img {
+            height: 55px;
+          }
+        }
+      }
     }
   }
 }
