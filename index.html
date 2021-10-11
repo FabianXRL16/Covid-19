@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid-19</title>
     <link rel="stylesheet" href="./Assets/Css/style.css" />
+    <script src="https://kit.fontawesome.com/a3a61b758e.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="app">
       <!-- Main Content -->
-      <div class="canvas"></div>
+      <div class="canvas">
+        <div class="canvas__container">
+          <div class="main-circle"></div>
+        </div>
+      </div>
       <!-- Main Content -->
       <section class="container">
         <nav class="navbar">
@@ -26,24 +31,24 @@
             <button>Update</button>
             <p>Get the lastet update of coronavirus (Covid-19)</p>
           </div>
-          <h1>Covid-19</h1>
+          <h1 class="title">Covid-19</h1>
           <div class="data">
-            <div>
-              <span>Casos Confirmados</span><p>12342</p>
+            <div class="data__item">
+              <span>Total cases</span><p>12342</p>
             </div>
-            <div>
-              <span>Nuevos Casos</span><p>12342</p>
+            <div class="data__item">
+              <span>New cases</span><p>12342</p>
             </div>
-            <div>
-              <span>Total de Muertes</span><p>12342</p>
+            <div class="data__item">
+              <span>Total deaths</span><p>12342</p>
             </div>
-            <div>
-              <span>Nuevas Muertes</span><p>12342</p>
+            <div class="data__item">
+              <span>New deaths</span><p>12342</p>
             </div>
           </div>
-          <div>
-            <input type="text" name="" id="">
-            <button>search</button>
+          <div class="search">
+            <input type="text" name="" id="" placeholder="Country to search...">
+            <button><i class="fas fa-search"></i></button>
           </div>
         </section>
         <section class="footer">

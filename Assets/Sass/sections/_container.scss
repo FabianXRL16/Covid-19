@@ -1,5 +1,5 @@
-@import '../vars';
-@import '../mixins';
+@import "../vars";
+@import "../mixins";
 
 .container {
   position: absolute;
@@ -13,8 +13,8 @@
     "container"
     "footer";
   .navbar {
-      height: 100%;
-      width: 100%;
+    height: 100%;
+    width: 100%;
     .navbar__content {
       grid-area: nav;
       height: 100%;
@@ -22,38 +22,101 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 100px;
+      padding: 0 10%;
       box-sizing: border-box;
       // animation: 2s navbar .5s ease-in;
       img {
-        height: 80px;
-        width: 80px;
+        height: 55px;
+        width: 55px;
       }
-      button{
-        @include btn($h: 50px, $w: 150px, $br: 25px, $bg: $bg-1, $c: $white, $fs: 18px);
+      button {
+        @include btn(
+          $h: 42px,
+          $w: 150px,
+          $br: 5px,
+          $bg: $bg-1,
+          $c: $white,
+          $fs: 17px
+        );
       }
     }
   }
   .main-content {
     grid-area: container;
-    border: 3px solid rgb(15, 221, 221);
-    .update{
+    padding: 20px 0 0 10%;
+    color: $bg-4;
+    .update {
       display: flex;
       align-items: center;
       gap: 15px;
-      height: 40px;
+      height: 30px;
       border-radius: 20px;
-      padding-left: 5px;
       background-color: $bg-2;
-      width: 470px;
+      width: 385px;
       color: $bg-4;
-      font-size: 14px;
-      button{
-        @include btn($h: 30px, $w: auto, $br: 15px, $bg: $bg-3, $c: $white, $fs: 14px);
+      font-size: 12px;
+      button {
+        @include btn(
+          $h: 30px,
+          $w: auto,
+          $br: 15px,
+          $bg: $bg-1,
+          $c: $white,
+          $fs: 12px
+        );
         padding: 0 15px;
-        &:hover{
-          background-color: #555555;
+        transition: .3s;
+        font-weight: 600;
+        &:hover {
+          background-color: $bg-6;
+          transition: .3s;
         }
+      }
+    }
+    .title{
+      font-size: 50px;
+      margin: 50px 0 0;
+    }
+    .data{
+      width: 450px;
+      display: grid;
+      column-gap: 80px;
+      grid-template-columns: repeat(2, 1fr);
+      .data__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .search{
+      background-color: $bg-4;
+      width: 650px;
+      height: 60px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5px 0 25px;
+      box-sizing: border-box;
+      margin-top: 50px;
+      box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+      transition: .3s;
+      &:hover{
+        box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
+        transition: .3s;
+      }
+      input{
+        @include input($h: 40px, $w: 91%, $br: none, $bg: transparent, $c: $bg-2, $b: none, $fs: 25px);
+      }
+      button{
+        @include btn(
+          $h: 50px,
+          $w: 50px,
+          $br: 25px,
+          $bg: $bg-1,
+          $c: $white,
+          $fs: 25px
+        );
       }
     }
   }
@@ -64,10 +127,10 @@
 }
 
 @keyframes navbar {
-    0%{
-      transform: translateY(-200px);
-    }
-    100%{
-      transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

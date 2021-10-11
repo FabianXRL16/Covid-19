@@ -1,0 +1,27 @@
+.canvas {
+  height: 100vh;
+  background-color: $bg-4;
+  z-index: 1;
+  position: absolute;
+  .canvas__container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    .main-circle {
+      position: absolute;
+      left: 200px;
+      width: 80vh;
+      height: 80vh;
+      background-color: $bg-5;
+      border-radius: 0 0 80% 0;
+      &::after {
+        content: "";
+        position: absolute;
+        left: -200px;
+        width: 300px;
+        height: 80vh;
+        background-color: $bg-5;
+      }
+    }
+  }
+}
