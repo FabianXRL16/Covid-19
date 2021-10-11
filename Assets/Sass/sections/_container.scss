@@ -65,30 +65,30 @@
           $fs: 12px
         );
         padding: 0 15px;
-        transition: .3s;
+        transition: 0.3s;
         font-weight: 600;
         &:hover {
           background-color: $bg-6;
-          transition: .3s;
+          transition: 0.3s;
         }
       }
     }
-    .title{
+    .title {
       font-size: 50px;
       margin: 50px 0 0;
     }
-    .data{
+    .data {
       width: 450px;
       display: grid;
       column-gap: 80px;
       grid-template-columns: repeat(2, 1fr);
-      .data__item{
+      .data__item {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
     }
-    .search{
+    .search {
       background-color: $bg-4;
       width: 650px;
       height: 60px;
@@ -100,15 +100,23 @@
       box-sizing: border-box;
       margin-top: 50px;
       box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
-      transition: .3s;
-      &:hover{
+      transition: 0.3s;
+      &:hover {
         box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
-        transition: .3s;
+        transition: 0.3s;
       }
-      input{
-        @include input($h: 40px, $w: 91%, $br: none, $bg: transparent, $c: $bg-2, $b: none, $fs: 25px);
+      input {
+        @include input(
+          $h: 40px,
+          $w: 91%,
+          $br: none,
+          $bg: transparent,
+          $c: $bg-2,
+          $b: none,
+          $fs: 25px
+        );
       }
-      button{
+      button {
         @include btn(
           $h: 50px,
           $w: 50px,
@@ -117,6 +125,11 @@
           $c: $white,
           $fs: 25px
         );
+        transition: .3s;
+        &:hover {
+          background-color: $bg-6;
+          transition: .3s;
+        }
       }
     }
   }

@@ -172,6 +172,11 @@
   cursor: pointer;
   outline: none;
   font-size: 25px;
+  transition: 0.3s;
+}
+.container .main-content .search button:hover {
+  background-color: #555555;
+  transition: 0.3s;
 }
 .container .footer {
   grid-area: footer;
