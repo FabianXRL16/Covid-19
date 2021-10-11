@@ -260,6 +260,7 @@
 }
 .container .footer ul li button img {
   height: 55px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .container .footer .socialNetworks {
   display: flex;
@@ -327,6 +328,20 @@
   border-radius: 100%;
   border: 10px solid #727272;
   transform: scale(1);
+  animation: 2s circle 0.5s ease-in;
+}
+.canvas .canvas__container .large-points {
+  position: absolute;
+  height: 200px;
+  bottom: -40px;
+  left: -20px;
+  animation: 2s circle 0.5s ease-in;
+}
+.canvas .canvas__container .small-points {
+  position: absolute;
+  height: 100px;
+  top: 150px;
+  right: 10px;
   animation: 2s circle 0.5s ease-in;
 }
 
