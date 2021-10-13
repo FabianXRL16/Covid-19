@@ -1,19 +1,35 @@
-@import './sections/loader.scss';
-@import './sections/container.scss';
-@import './sections/canvas';
+@import "./sections/loader.scss";
+@import "./sections/container.scss";
+@import "./sections/canvas";
 
-@import './animations';
-@import './vars.scss';
+@import "./breakpoints";
+@import "./animations";
+@import "./vars.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap");
 
-body{
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
-.app{
-    position: relative;
-    height: 100vh;
+@media (max-width: 768px) {
+  body {
+    height: 150vh;
+    width: 100vw;
+    overflow: scroll;
+    margin: 0;
+    box-sizing: border-box;
+    &::-webkit-scrollbar{
+        width: 0px;
+        height: 0px;
+    }
+  }
+}
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100wh;
 }

@@ -1,12 +1,13 @@
 @import '../vars.scss';
 
 .loader{
+    display: none;
     background-color: $bg-1;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center;   
     align-items: center;
     gap: 10px;
     z-index: 999;
@@ -15,7 +16,7 @@
     div{
         height: 30px;
         width: 30px;
-        border-radius: 50%;
+        border-radius: 50%;  
         background-color: $white;
         animation: scaling 2s ease-in-out infinite;
         transform: scale(0);
