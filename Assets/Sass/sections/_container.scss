@@ -79,14 +79,17 @@
       margin: 50px 0 0;
     }
     .data {
-      width: 450px;
+      width: 550px;
       display: grid;
-      column-gap: 80px;
+      column-gap: 60px;
       grid-template-columns: repeat(2, 1fr);
       .data__item {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        #TotalConfirmed{
+          font-weight: 600;
+        }
       }
     }
     .search {

@@ -1,123 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid-19</title>
-    <link rel="stylesheet" href="./Assets/Css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/a3a61b758e.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="app">
-      <!-- Main Content -->
-      <div class="canvas">
-        <div class="canvas__container">
-          <div class="large-circle"></div>
-          <div class="medium-circle"></div>
-          <div class="small-circle"></div>
-          <img class="large-points" src="./Assets/Img/points.svg" alt="" />
-          <img class="small-points" src="./Assets/Img/points.svg" alt="" />
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Covid-19</title>
+  <link rel="stylesheet" href="./Assets/Css/style.css" />
+  <script src="https://kit.fontawesome.com/a3a61b758e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="app">
+    <!-- Main Content -->
+    <div class="canvas">
+      <div class="canvas__container">
+        <div class="large-circle"></div>
+        <div class="medium-circle"></div>
+        <div class="small-circle"></div>
+        <img class="large-points" src="./Assets/Img/points.svg" alt="" />
+        <img class="small-points" src="./Assets/Img/points.svg" alt="" />
       </div>
-      <!-- Main Content -->
-      <section class="container">
-        <nav class="navbar">
-          <div class="navbar__content">
-            <img
-              src="https://www.un.org/sites/un2.un.org/files/covid-19.svg"
-              alt="Logo"
-            />
-            <button>Global</button>
-          </div>
-        </nav>
-        <section class="main-content">
-          <div class="update">
-            <button>Update</button>
-            <p>Get the lastet update of coronavirus (Covid-19)</p>
-          </div>
-          <h1 class="title">Covid-19</h1>
-          <div class="data">
-            <div class="data__item">
-              <span>Total cases</span>
-              <p>12342</p>
-            </div>
-            <div class="data__item">
-              <span>New cases</span>
-              <p>12342</p>
-            </div>
-            <div class="data__item">
-              <span>Total deaths</span>
-              <p>12342</p>
-            </div>
-            <div class="data__item">
-              <span>New deaths</span>
-              <p>12342</p>
-            </div>
-          </div>
-          <div class="search">
-            <input
-              type="text"
-              name=""
-              id=""
-              placeholder="Country to search..."
-            />
-            <button><i class="fas fa-search"></i></button>
-          </div>
-        </section>
-        <section class="footer">
-          <p class="topCountries">Most affected</p>
-          <ul>
-            <li>
-              <button>
-                <img src="https://flagcdn.com/us.svg" alt="Peru" />
-                <div class="count">
-                  <i class="fas fa-virus"></i>
-                  <p>89413241</p>
-                </div>
-                <div class="number"><span>1</span></div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <img src="https://flagcdn.com/in.svg" alt="Peru" />
-                <div class="count">
-                  <i class="fas fa-virus"></i>
-                  <p>69413241</p>
-                </div>
-                <div class="number"><span>2</span></div>
-              </button>
-            </li>
-            <li>
-              <button>
-                <img src="https://flagcdn.com/br.svg" alt="Peru" />
-                <div class="count">
-                  <i class="fas fa-virus"></i>
-                  <p>19413241</p>
-                </div>
-                <div class="number"><span>3</span></div>
-              </button>
-            </li>
-          </ul>
-          <div class="socialNetworks">
-            <button><i class="fab fa-instagram"></i></button>
-            <button><i class="fab fa-github"></i></button>
-            <p>©FXRL16</p>
-          </div>
-        </section>
-      </section>
-      <!-- Loader -->
-      <section class="loader">
-        <div></div>
-        <div></div>
-        <div></div>
-      </section>
-      <!-- Modal -->
-      <section></section>
     </div>
-    <script src="app.js"></script>
-  </body>
+    <!-- Main Content -->
+    <section class="container">
+      <nav class="navbar">
+        <div class="navbar__content">
+          <img src="https://www.un.org/sites/un2.un.org/files/covid-19.svg" alt="Logo" />
+          <button>Global</button>
+        </div>
+      </nav>
+      <section class="main-content">
+        <div class="update">
+          <button>Update</button>
+          <p>Get the lastet update of coronavirus (Covid-19)</p>
+        </div>
+        <h1 class="title">Covid-19</h1>
+        <div class="data">
+          <div class="data__item">
+            <span>Total cases</span>
+            <p id="TotalConfirmed">12342</p>
+          </div>
+          <div class="data__item">
+            <span>New cases</span>
+            <p id="NewConfirmed">12342</p>
+          </div>
+          <div class="data__item">
+            <span>Total deaths</span>
+            <p id="TotalDeaths">12342</p>
+          </div>
+          <div class="data__item">
+            <span>New deaths</span>
+            <p id="NewDeaths">12342</p>
+          </div>
+        </div>
+        <div class="search">
+          <input type="text" name="search countries" id="findCountry" placeholder="Country to search..." />
+          <button onclick="search()"><i class="fas fa-search"></i></button>
+        </div>
+      </section>
+      <section class="footer">
+        <p class="topCountries">Most affected</p>
+        <ul>
+          <li>
+            <button>
+              <img src="https://flagcdn.com/us.svg" alt="Peru" />
+              <div class="count">
+                <i class="fas fa-virus"></i>
+                <p>89413241</p>
+              </div>
+              <div class="number"><span>1</span></div>
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="https://flagcdn.com/in.svg" alt="Peru" />
+              <div class="count">
+                <i class="fas fa-virus"></i>
+                <p>69413241</p>
+              </div>
+              <div class="number"><span>2</span></div>
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="https://flagcdn.com/br.svg" alt="Peru" />
+              <div class="count">
+                <i class="fas fa-virus"></i>
+                <p>19413241</p>
+              </div>
+              <div class="number"><span>3</span></div>
+            </button>
+          </li>
+        </ul>
+        <div class="socialNetworks">
+          <button><i class="fab fa-instagram"></i></button>
+          <button><i class="fab fa-github"></i></button>
+          <p>©FXRL16</p>
+        </div>
+      </section>
+    </section>
+    <!-- Loader -->
+    <section class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+    <!-- Modal -->
+    <section></section>
+  </div>
+  <script src="app.js"></script>
+</body>
+
 </html>
