@@ -69,6 +69,13 @@
   cursor: pointer;
   outline: none;
   font-size: 17px;
+  transform: scale(1);
+  transition: 0.3s;
+}
+.container .navbar .navbar__content button:hover {
+  transform: scale(0.9);
+  transition: 0.3s;
+  background-color: #418fde;
 }
 .container .animationMain {
   grid-area: animation;

@@ -39,6 +39,13 @@
           $c: $white,
           $fs: 17px
         );
+        transform: scale(1);
+        transition: .3s;
+        &:hover{
+          transform: scale(.9);
+          transition: .3s;
+          background-color: $bg-7;
+        }
       }
     }
   }
