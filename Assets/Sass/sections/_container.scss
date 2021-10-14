@@ -27,8 +27,7 @@
       box-sizing: border-box;
       animation: 2s navbar 0.5s ease-in;
       img {
-        height: 55px;
-        width: 55px;
+        height: 50px;
       }
       button {
         @include btn(

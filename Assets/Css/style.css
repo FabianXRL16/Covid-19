@@ -56,8 +56,7 @@
   animation: 2s navbar 0.5s ease-in;
 }
 .container .navbar .navbar__content img {
-  height: 55px;
-  width: 55px;
+  height: 50px;
 }
 .container .navbar .navbar__content button {
   height: 42px;
