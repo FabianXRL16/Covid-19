@@ -45,75 +45,73 @@
   .animationMain{
     grid-area: animation;
     padding: 80px 20% 0 0;
+    position: relative;
     animation: 2s animationMain 0.5s ease-in;
-    .bakcgroundAmintion{
-      position: relative;
-      margin-left: auto;
-      width: 600px;
-      height: 322px;
-      background-size: cover;
-      .covid{
-        width: 101px;
-        height: 101px;
-        position: absolute;
-        top: 70px;
-        left: 60px;
-        animation-name: global;
-        animation-duration: 28s;
-        animation-delay: 4s;
-        animation-timing-function: ease-in;
-        animation-iteration-count: infinite;
-        .protein{
-          transform: scale(0);
-          animation: 10s protein 2s ease-in-out infinite;
-          background-size: cover;
-          width: 100%;
-          height: 100%;
-          position: relative;
-          .protein-1{
-            @include protein($s: 16px, $bg:#FF005E);
-            border: 2px solid #fff;
-            top: 25px;
-            left: 40px;
-            animation: 2s protein1 .5s infinite;
-          }
-          .protein-2{
-            @include protein($s: 4px, $bg:#FF005E);
-            border: 2px solid #fff;
-            bottom: 25px;
-            left: 50px;
-            animation: 2s protein2 .5s infinite;
-          }
-          .protein-3{
-            @include protein($s: 4px, $bg:#007300);
-            bottom: 45px;
-            left: 30px;
-            animation: 2s protein3 .5s infinite;
-          }
-          .protein-4{
-            @include protein($s: 2px, $bg:#007300);
-            bottom: 45px;
-            left: 60px;
-            animation: 2s protein4 .5s infinite;
-          }
-          .protein-5{
-            @include protein($s: 4px, $bg:#007300);
-            bottom: 35px;
-            right: 20px;
-            animation: 2s protein5 .5s infinite;
-          }
-          .protein-6{
-            @include protein($s: 6px, $bg:#007300);
-            top: 24px;
-            right: 25px;
-            animation: 2s protein6 .5s infinite;
-          }
-          .protein-7{
-            @include protein($s: 3px, $bg:#007300);
-            top: 18px;
-            left: 48px;
-            animation: 2s protein7 .5s infinite;
-          }
+    .shadow{
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background-color: #000;
+      position: absolute;
+      box-shadow: rgba(0, 0, 0, 0.6) 0px 19px 38px, rgba(0, 0, 0, 0.6) 0px 15px 20px;
+      top: 70px;
+      left: 160px;
+    }
+    .covid{
+      width: 540px;
+      height: 537px;
+      position: absolute;
+      top: 0;
+      left: 60px;
+      .protein{
+        animation: 10s protein 2s ease-in-out infinite;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .protein-1{
+          @include protein($s: 60px, $bg:#FF005E);
+          border: 8px solid #fff;
+          top: 120px;
+          left: 250px;
+          animation: 2s protein1 .5s infinite;
+        }
+        .protein-2{
+          @include protein($s: 20px, $bg:#FF005E);
+          border: 6px solid #fff;
+          bottom: 150px;
+          left: 300px;
+          animation: 2s protein2 .5s infinite;
+        }
+        .protein-3{
+          @include protein($s: 16px, $bg:#007300);
+          bottom: 255px;
+          left: 160px;
+          animation: 2s protein3 .5s infinite;
+        }
+        .protein-4{
+          @include protein($s: 10px, $bg:#007300);
+          bottom: 250px;
+          left: 280px;
+          animation: 2s protein4 .5s infinite;
+        }
+        .protein-5{
+          @include protein($s: 16px, $bg:#007300);
+          bottom: 230px;
+          right: 100px;
+          animation: 2s protein5 .5s infinite;
+        }
+        .protein-6{
+          @include protein($s: 25px, $bg:#007300);
+          top: 160px;
+          right: 130px;
+          animation: 2s protein6 .5s infinite;
+        }
+        .protein-7{
+          @include protein($s: 5px, $bg:#007300);
+          top: 120px;
+          left: 180px;
+          animation: 2s protein7 .5s infinite;
         }
       }
     }

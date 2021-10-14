@@ -82,10 +82,10 @@
     transform: translateX(0px);
   }
   33%{
-    transform: translateX(2px);
+    transform: translateX(10px);
   }
   66%{
-    transform: translateX(-2px);
+    transform: translateX(-10px);
   }
   100%{
     transform: translateX(0px);
@@ -97,16 +97,16 @@
     transform: translate(0px, 0px);
   }
   20%{
-    transform: translate(1px, 1px);
+    transform: translate(5px, 5px);
   }
   40%{
-    transform: translate(-1px, 1px);
+    transform: translate(-5px, 5px);
   }
   80%{
-    transform: translate(1px, -1px);
+    transform: translate(5px, -5px);
   }
   100%{
-    transform: translate(-1px, -1px);
+    transform: translate(-5px, -5px);
   }
 }
 
@@ -115,7 +115,7 @@
     transform: translate(0px, 0px);
   }
   50%{
-    transform: translate(2px, -2px);
+    transform: translate(10px, -10px);
   }
 }
 
@@ -124,10 +124,10 @@
     transform: translate(0px, 0px);
   }
   20%{
-    transform: translate(2px, 0px);
+    transform: translate(10px, 0px);
   }
   60%{
-    transform: translate(-2px, -2px);
+    transform: translate(-10px, -10px);
   }
 }
 
@@ -136,10 +136,10 @@
     transform: translate(0px, 0px);
   }
   20%{
-    transform: translate(0px, -2px);
+    transform: translate(0px, -10px);
   }
   60%{
-    transform: translate(-2px, 4px);
+    transform: translate(-10px, 16px);
   }
 }
 
@@ -148,10 +148,10 @@
     transform: translate(0px, 0px);
   }
   20%{
-    transform: translate(-2px, -2px);
+    transform: translate(-10px, -10px);
   }
   60%{
-    transform: translate(2px, 6px);
+    transform: translate(10px, 18px);
   }
 }
 
@@ -164,17 +164,5 @@
   }
   60%{
     transform: scale(1.5);
-  }
-}
-
-@keyframes global {
-  0%{
-    transform: translate(0px, 0px);
-  }
-  10%{
-    transform: scale(1);
-  }
-  14%{
-    transform: translate(50px, 50px);
   }
 }
