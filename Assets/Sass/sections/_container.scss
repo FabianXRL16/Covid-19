@@ -8,15 +8,16 @@
   width: 100%;
   display: grid;
   grid-template-rows: 15% 65% 20%;
+  grid-template-columns: 50% 50%;
   grid-template-areas:
-    "nav"
-    "container"
-    "footer";
+    "nav nav"
+    "container animation"
+    "footer footer";
   .navbar {
     height: 100%;
     width: 100%;
+    grid-area: nav;
     .navbar__content {
-      grid-area: nav;
       height: 100%;
       width: 100%;
       display: flex;
@@ -41,9 +42,85 @@
       }
     }
   }
+  .animationMain{
+    grid-area: animation;
+    padding: 80px 20% 0 0;
+    animation: 2s animationMain 0.5s ease-in;
+    .bakcgroundAmintion{
+      position: relative;
+      margin-left: auto;
+      width: 600px;
+      height: 322px;
+      background-size: cover;
+      .covid{
+        width: 101px;
+        height: 101px;
+        position: absolute;
+        top: 70px;
+        left: 60px;
+        animation-name: global;
+        animation-duration: 28s;
+        animation-delay: 4s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        .protein{
+          transform: scale(0);
+          animation: 10s protein 2s ease-in-out infinite;
+          background-size: cover;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          .protein-1{
+            @include protein($s: 16px, $bg:#FF005E);
+            border: 2px solid #fff;
+            top: 25px;
+            left: 40px;
+            animation: 2s protein1 .5s infinite;
+          }
+          .protein-2{
+            @include protein($s: 4px, $bg:#FF005E);
+            border: 2px solid #fff;
+            bottom: 25px;
+            left: 50px;
+            animation: 2s protein2 .5s infinite;
+          }
+          .protein-3{
+            @include protein($s: 4px, $bg:#007300);
+            bottom: 45px;
+            left: 30px;
+            animation: 2s protein3 .5s infinite;
+          }
+          .protein-4{
+            @include protein($s: 2px, $bg:#007300);
+            bottom: 45px;
+            left: 60px;
+            animation: 2s protein4 .5s infinite;
+          }
+          .protein-5{
+            @include protein($s: 4px, $bg:#007300);
+            bottom: 35px;
+            right: 20px;
+            animation: 2s protein5 .5s infinite;
+          }
+          .protein-6{
+            @include protein($s: 6px, $bg:#007300);
+            top: 24px;
+            right: 25px;
+            animation: 2s protein6 .5s infinite;
+          }
+          .protein-7{
+            @include protein($s: 3px, $bg:#007300);
+            top: 18px;
+            left: 48px;
+            animation: 2s protein7 .5s infinite;
+          }
+        }
+      }
+    }
+  }
   .main-content {
     grid-area: container;
-    padding: 20px 0 0 10%;
+    padding: 20px 0 0 20%;
     color: $bg-4;
     animation: 2s mainContent 0.5s ease-in;
     .update {
@@ -79,7 +156,7 @@
       margin: 50px 0 0;
     }
     .data {
-      width: 550px;
+      width: 90%;
       display: grid;
       column-gap: 60px;
       grid-template-columns: repeat(2, 1fr);
@@ -94,7 +171,7 @@
     }
     .search {
       background-color: $bg-4;
-      width: 650px;
+      width: 90%;
       height: 60px;
       border-radius: 30px;
       display: flex;

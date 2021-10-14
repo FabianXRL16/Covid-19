@@ -29,6 +29,15 @@
   }
 }
 
+@keyframes animationMain {
+  0% {
+    transform: translateX(750px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 @keyframes mainContent {
   0% {
     transform: translateX(-600px);
@@ -53,5 +62,119 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes protein {
+  0%, 40%, 100%{
+    transform: rotate(0deg);
+  }
+  20%{
+    transform: rotate(20deg);
+  }
+  60%{
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes protein1 {
+  0%{
+    transform: translateX(0px);
+  }
+  33%{
+    transform: translateX(2px);
+  }
+  66%{
+    transform: translateX(-2px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes protein2 {
+  0%, 60%{
+    transform: translate(0px, 0px);
+  }
+  20%{
+    transform: translate(1px, 1px);
+  }
+  40%{
+    transform: translate(-1px, 1px);
+  }
+  80%{
+    transform: translate(1px, -1px);
+  }
+  100%{
+    transform: translate(-1px, -1px);
+  }
+}
+
+@keyframes protein3 {
+  0%, 100%{
+    transform: translate(0px, 0px);
+  }
+  50%{
+    transform: translate(2px, -2px);
+  }
+}
+
+@keyframes protein4 {
+  0%, 40%, 100%{
+    transform: translate(0px, 0px);
+  }
+  20%{
+    transform: translate(2px, 0px);
+  }
+  60%{
+    transform: translate(-2px, -2px);
+  }
+}
+
+@keyframes protein5 {
+  0%, 40%, 100%{
+    transform: translate(0px, 0px);
+  }
+  20%{
+    transform: translate(0px, -2px);
+  }
+  60%{
+    transform: translate(-2px, 4px);
+  }
+}
+
+@keyframes protein6 {
+  0%, 40%, 100%{
+    transform: translate(0px, 0px);
+  }
+  20%{
+    transform: translate(-2px, -2px);
+  }
+  60%{
+    transform: translate(2px, 6px);
+  }
+}
+
+@keyframes protein7 {
+  0%, 40%, 100%{
+    transform: scale(1);
+  }
+  20%{
+    transform: scale(1.2);
+  }
+  60%{
+    transform: scale(1.5);
+  }
+}
+
+@keyframes global {
+  0%{
+    transform: translate(0px, 0px);
+  }
+  10%{
+    transform: scale(1);
+  }
+  14%{
+    transform: translate(50px, 50px);
   }
 }

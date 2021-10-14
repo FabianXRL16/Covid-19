@@ -1,35 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap");
-.loader {
-  display: none;
-  background-color: #262626;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  z-index: 999;
-  animation: loader 2s linear forwards;
-}
-.loader div {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: #fff;
-  animation: scaling 2s ease-in-out infinite;
-  transform: scale(0);
-}
-.loader div:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.loader div:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.loader div:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
 .container {
   position: absolute;
   z-index: 2;
@@ -37,14 +6,15 @@
   width: 100%;
   display: grid;
   grid-template-rows: 15% 65% 20%;
-  grid-template-areas: "nav" "container" "footer";
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "nav nav" "container animation" "footer footer";
 }
 .container .navbar {
   height: 100%;
   width: 100%;
+  grid-area: nav;
 }
 .container .navbar .navbar__content {
-  grid-area: nav;
   height: 100%;
   width: 100%;
   display: flex;
@@ -69,9 +39,113 @@
   outline: none;
   font-size: 17px;
 }
+.container .animationMain {
+  grid-area: animation;
+  padding: 80px 20% 0 0;
+  animation: 2s animationMain 0.5s ease-in;
+}
+.container .animationMain .bakcgroundAmintion {
+  position: relative;
+  margin-left: auto;
+  width: 600px;
+  height: 322px;
+  background-size: cover;
+}
+.container .animationMain .bakcgroundAmintion .covid {
+  width: 101px;
+  height: 101px;
+  position: absolute;
+  top: 70px;
+  left: 60px;
+  animation-name: global;
+  animation-duration: 28s;
+  animation-delay: 4s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+.container .animationMain .bakcgroundAmintion .covid .protein {
+  transform: scale(0);
+  animation: 10s protein 2s ease-in-out infinite;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.container .animationMain .bakcgroundAmintion .covid .protein .protein-1 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #FF005E;
+  position: absolute;
+  border: 2px solid #fff;
+  top: 25px;
+  left: 40px;
+  animation: 2s protein1 0.5s infinite;
+}
+.container .animationMain .bakcgroundAmintion .covid .protein .protein-2 {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #FF005E;
+  position: absolute;
+  border: 2px solid #fff;
+  bottom: 25px;
+  left: 50px;
+  animation: 2s protein2 0.5s infinite;
+}
+.container .animationMain .bakcgroundAmintion .covid .protein .protein-3 {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #007300;
+  position: absolute;
+  bottom: 45px;
+  left: 30px;
+  animation: 2s protein3 0.5s infinite;
+}
+.container .animationMain .bakcgroundAmintion .covid .protein .protein-4 {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #007300;
+  position: absolute;
+  bottom: 45px;
+  left: 60px;
+  animation: 2s protein4 0.5s infinite;
+}
+.container .animationMain .bakcgroundAmintion .covid .protein .protein-5 {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #007300;
+  position: absolute;
+  bottom: 35px;
+  right: 20px;
+  animation: 2s protein5 0.5s infinite;
+}
+.container .animationMain .bakcgroundAmintion .covid .protein .protein-6 {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #007300;
+  position: absolute;
+  top: 24px;
+  right: 25px;
+  animation: 2s protein6 0.5s infinite;
+}
+.container .animationMain .bakcgroundAmintion .covid .protein .protein-7 {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #007300;
+  position: absolute;
+  top: 18px;
+  left: 48px;
+  animation: 2s protein7 0.5s infinite;
+}
 .container .main-content {
   grid-area: container;
-  padding: 20px 0 0 10%;
+  padding: 20px 0 0 20%;
   color: #F2F2F2;
   animation: 2s mainContent 0.5s ease-in;
 }
@@ -109,7 +183,7 @@
   margin: 50px 0 0;
 }
 .container .main-content .data {
-  width: 550px;
+  width: 90%;
   display: grid;
   column-gap: 60px;
   grid-template-columns: repeat(2, 1fr);
@@ -124,7 +198,7 @@
 }
 .container .main-content .search {
   background-color: #F2F2F2;
-  width: 650px;
+  width: 90%;
   height: 60px;
   border-radius: 30px;
   display: flex;
@@ -381,6 +455,14 @@
     transform: translateY(0px);
   }
 }
+@keyframes animationMain {
+  0% {
+    transform: translateX(750px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 @keyframes mainContent {
   0% {
     transform: translateX(-600px);
@@ -403,6 +485,111 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes protein {
+  0%, 40%, 100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+}
+@keyframes protein1 {
+  0% {
+    transform: translateX(0px);
+  }
+  33% {
+    transform: translateX(2px);
+  }
+  66% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes protein2 {
+  0%, 60% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(1px, 1px);
+  }
+  40% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(-1px, -1px);
+  }
+}
+@keyframes protein3 {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(2px, -2px);
+  }
+}
+@keyframes protein4 {
+  0%, 40%, 100% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(2px, 0px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+}
+@keyframes protein5 {
+  0%, 40%, 100% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(0px, -2px);
+  }
+  60% {
+    transform: translate(-2px, 4px);
+  }
+}
+@keyframes protein6 {
+  0%, 40%, 100% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 6px);
+  }
+}
+@keyframes protein7 {
+  0%, 40%, 100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1.5);
+  }
+}
+@keyframes global {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transform: scale(1);
+  }
+  14% {
+    transform: translate(50px, 50px);
   }
 }
 body {

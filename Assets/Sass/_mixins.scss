@@ -10,13 +10,29 @@
   font-size: $fs;
 }
 
-@mixin input($h, $w, $br: 50%, $bg: transparent, $c: #000, $b: none, $fs: 16px) {
-    height: $h;
-    width: $w;
-    border-radius: $br;
-    background-color: $bg;
-    color: $c;
-    border: $b;
-    outline: none;
-    font-size: $fs;
-  }
+@mixin input(
+  $h,
+  $w,
+  $br: 50%,
+  $bg: transparent,
+  $c: #000,
+  $b: none,
+  $fs: 16px
+) {
+  height: $h;
+  width: $w;
+  border-radius: $br;
+  background-color: $bg;
+  color: $c;
+  border: $b;
+  outline: none;
+  font-size: $fs;
+}
+
+@mixin protein($s, $bg) {
+  width: $s;
+  height: $s;
+  border-radius: 50%;
+  background-color: $bg;
+  position: absolute;
+}
