@@ -77,14 +77,14 @@
         height: 100%;
         position: relative;
         .protein-1 {
-          @include protein($s: 60px, $bg: $bg-5);
+          @include protein($s: 60px, $bg: $bg-2);
           border: 8px solid  $bg-4;
           top: 120px;
           left: 250px;
           animation: 2s protein1 0.5s infinite;
         }
         .protein-2 {
-          @include protein($s: 20px, $bg: $bg-5);
+          @include protein($s: 20px, $bg: $bg-2);
           border: 6px solid  $bg-4;
           bottom: 150px;
           left: 300px;
