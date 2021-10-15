@@ -2,7 +2,7 @@
 
 .loader {
   display: none;
-  background-color: $bg-2;
+  background-color: $bg-4;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -17,7 +17,7 @@
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background-color: $white;
+    background-color: $bg-5;
     animation: scaling 2s ease-in-out infinite;
     transform: scale(0);
     &:nth-child(1) {

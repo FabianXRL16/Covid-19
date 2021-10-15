@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap");
 .loader {
   display: none;
-  background-color: #3F4B59;
+  background-color: #e4e4e4;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -16,7 +16,7 @@
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #172126;
   animation: scaling 2s ease-in-out infinite;
   transform: scale(0);
 }
