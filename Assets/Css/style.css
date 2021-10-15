@@ -74,7 +74,7 @@
 .container .navbar .navbar__content button:hover {
   transform: scale(0.9);
   transition: 0.3s;
-  background-color: #0c0c0c;
+  background-color: #172126;
 }
 .container .animationMain {
   grid-area: animation;
@@ -254,7 +254,7 @@
   width: 91%;
   border-radius: none;
   background-color: transparent;
-  color: #3F4B59;
+  color: #64707D;
   border: none;
   outline: none;
   font-size: 25px;
@@ -296,7 +296,7 @@
   transition: 0.5s;
 }
 .container .footer ul:hover li button .count {
-  background-color: #353535;
+  background-color: #64707D;
   transition: 0.5s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -314,7 +314,7 @@
 .container .footer ul li {
   position: relative;
   width: 220px;
-  height: 90%;
+  height: 100%;
   display: flex;
   justify-content: center;
   transition: 0.3s;
@@ -356,6 +356,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding-top: 15px;
 }
 .container .footer ul li button .number {
   position: absolute;
@@ -410,7 +411,7 @@
   transition: 0.3s;
 }
 .container .footer .socialNetworks button:hover {
-  color: #3F4B59;
+  color: #FF005E;
   transition: 0.3s;
 }
 
