@@ -21,18 +21,24 @@ fetch(URL)
 
 function search() {
   let inputValue = document.getElementById("findCountry").value;
-  inputValue = convertWord(inputValue)
+  inputValue = convertWord(inputValue);
   console.log(inputValue);
   limpiar();
   document.getElementById("findCountry").placeholder = "Country to search...";
   let findCountry = countries.filter((country) =>
     country.Slug.includes(inputValue)
   );
+  console.log(findCountry);
+  document.getElementById("title").innerText =
+    findCountry[0].Country;
   document.getElementById("TotalConfirmed").innerText =
-    findCountry.TotalConfirmed;
-  document.getElementById("NewConfirmed").innerText = findCountry.NewConfirmed;
-  document.getElementById("TotalDeaths").innerText = findCountry.TotalDeaths;
-  document.getElementById("NewDeaths").innerText = findCountry.NewDeaths;
+    findCountry[0].TotalConfirmed.toLocaleString();
+  document.getElementById("NewConfirmed").innerText =
+    findCountry[0].NewConfirmed.toLocaleString();
+  document.getElementById("TotalDeaths").innerText =
+    findCountry[0].TotalDeaths.toLocaleString();
+  document.getElementById("NewDeaths").innerText =
+    findCountry[0].NewDeaths.toLocaleString();
 }
 
 function limpiar() {
@@ -43,12 +49,12 @@ function toUpper(str) {
   return str
     .toLowerCase()
     .split(" ")
-    .map(word => {
+    .map((word) => {
       return word[0].toUpperCase() + word.substr(1);
     })
     .join(" ");
 }
 
-function convertWord(str){
-  return str.toLowerCase().trim().split(" ").join("-")
+function convertWord(str) {
+  return str.toLowerCase().trim().split(" ").join("-");
 }
