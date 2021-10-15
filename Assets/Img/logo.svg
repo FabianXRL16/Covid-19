@@ -5,7 +5,7 @@
 viewBox="0 0 30548 8416"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <font id="FontID1" horiz-adv-x="715" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="600">
+  <font id="FontID1" horiz-adv-x="715" font-variant="normal" style="fill-rule:nonzero" font-weight="600">
 	<font-face 
 		font-family="Poppins SemiBold">
 		<font-face-src>
@@ -17,7 +17,7 @@ viewBox="0 0 30548 8416"
    <glyph unicode="V" horiz-adv-x="711" d="M695.999 698l-255.999 -698 -170.001 0 -255.999 698 150 0 191.998 -555.001 191 555.001 149 0z"/>
    <glyph unicode="o" horiz-adv-x="638" d="M315 -8.99963c-53.3328,0 -101.333,11.8338 -144,35.4992 -42.6654,23.6676 -76.1654,57.1676 -100.5,100.5 -24.3326,43.3346 -36.4999,93.334 -36.4999,150 0,56.6662 12.5009,106.668 37.5006,150 24.9997,43.3325 59.1668,76.8325 102.499,100.5 43.3346,23.6654 91.6684,35.4992 145.001,35.4992 53.3328,0 101.667,-11.8338 144.999,-35.4992 43.3346,-23.6676 77.4996,-57.1676 102.501,-100.5 24.9997,-43.3325 37.4984,-93.334 37.4984,-150 0,-56.6662 -12.8323,-106.666 -38.4991,-150 -25.6668,-43.3325 -60.3332,-76.8325 -103.999,-100.5 -43.6682,-23.6654 -92.5012,-35.4992 -146.501,-35.4992zm0 122.001c25.3332,0 49.1665,6.16545 71.4999,18.4985 22.3334,12.3331 40.1669,30.8337 53.5006,55.4998 13.3337,24.6683 20.0006,54.667 20.0006,90.0006 0,52.6657 -13.8351,93.1661 -41.5011,121.499 -27.666,28.3331 -61.4996,42.5018 -101.501,42.5018 -39.9991,0 -73.4991,-14.1687 -100.498,-42.5018 -27.001,-28.3331 -40.5005,-68.8336 -40.5005,-121.499 0,-52.6657 13.1659,-93.1661 39.4998,-121.499 26.3339,-28.3331 59.5004,-42.4997 99.4994,-42.4997z"/>
   </font>
-  <font id="FontID0" horiz-adv-x="626" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="200">
+  <font id="FontID0" horiz-adv-x="626" font-variant="normal" style="fill-rule:nonzero" font-weight="200">
 	<font-face 
 		font-family="Poppins ExtraLight">
 		<font-face-src>
@@ -31,11 +31,11 @@ viewBox="0 0 30548 8416"
   </font>
   <style type="text/css">
    <![CDATA[
-    @font-face { font-family:"Poppins SemiBold";font-variant:normal;font-style:normal;font-weight:600;src:url("#FontID1") format(svg)}
-    @font-face { font-family:"Poppins ExtraLight";font-variant:normal;font-style:normal;font-weight:200;src:url("#FontID0") format(svg)}
+    @font-face { font-family:"Poppins SemiBold";font-variant:normal;font-weight:600;src:url("#FontID1") format(svg)}
+    @font-face { font-family:"Poppins ExtraLight";font-variant:normal;font-weight:200;src:url("#FontID0") format(svg)}
     .fil2 {fill:#418FDE}
+    .fil1 {fill:#F2F2F2}
     .fil0 {fill:#FF005E}
-    .fil1 {fill:white}
     .fnt1 {font-weight:600;font-size:4646.86px;font-family:'Poppins SemiBold'}
     .fnt0 {font-weight:200;font-size:5595.95px;font-family:'Poppins ExtraLight'}
    ]]>
