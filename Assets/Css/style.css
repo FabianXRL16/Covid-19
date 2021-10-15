@@ -110,9 +110,9 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #FF005E;
+  background-color: #172126;
   position: absolute;
-  border: 8px solid #fff;
+  border: 8px solid #e4e4e4;
   top: 120px;
   left: 250px;
   animation: 2s protein1 0.5s infinite;
@@ -121,9 +121,9 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #FF005E;
+  background-color: #172126;
   position: absolute;
-  border: 6px solid #fff;
+  border: 6px solid #e4e4e4;
   bottom: 150px;
   left: 300px;
   animation: 2s protein2 0.5s infinite;
@@ -132,7 +132,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #007300;
+  background-color: #172126;
   position: absolute;
   bottom: 255px;
   left: 160px;
@@ -142,7 +142,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #007300;
+  background-color: #172126;
   position: absolute;
   bottom: 250px;
   left: 280px;
@@ -152,7 +152,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #007300;
+  background-color: #172126;
   position: absolute;
   bottom: 230px;
   right: 100px;
@@ -162,7 +162,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #007300;
+  background-color: #172126;
   position: absolute;
   top: 160px;
   right: 130px;
@@ -172,7 +172,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #007300;
+  background-color: #172126;
   position: absolute;
   top: 120px;
   left: 180px;
@@ -181,7 +181,7 @@
 .container .main-content {
   grid-area: container;
   padding: 20px 0 0 20%;
-  color: #F2F2F2;
+  color: #e4e4e4;
   animation: 2s mainContent 0.5s ease-in;
 }
 .container .main-content .update {
@@ -192,7 +192,7 @@
   border-radius: 20px;
   background-color: #3F4B59;
   width: 385px;
-  color: #F2F2F2;
+  color: #e4e4e4;
   font-size: 12px;
 }
 .container .main-content .update button {
@@ -232,7 +232,7 @@
   font-weight: 600;
 }
 .container .main-content .search {
-  background-color: #F2F2F2;
+  background-color: #e4e4e4;
   width: 90%;
   height: 60px;
   border-radius: 30px;
@@ -286,7 +286,7 @@
 .container .footer .topCountries {
   position: absolute;
   top: -60px;
-  color: #F2F2F2;
+  color: #e4e4e4;
 }
 .container .footer ul {
   display: flex;
@@ -296,12 +296,12 @@
   transition: 0.5s;
 }
 .container .footer ul:hover li button .count {
-  background-color: #64707D;
+  background-color: #3F4B59;
   transition: 0.5s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .container .footer ul:hover li button .number {
-  background-color: #64707D;
+  background-color: #3F4B59;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .container .footer ul:hover li:hover button .count {
@@ -365,7 +365,7 @@
   height: 50px;
   width: 50px;
   background-color: #FF005E;
-  color: #F2F2F2;
+  color: #e4e4e4;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -377,7 +377,7 @@
   height: 30px;
   width: 196px;
   background-color: #0c0c0c;
-  color: #F2F2F2;
+  color: #e4e4e4;
   position: absolute;
   bottom: 30px;
   display: flex;
@@ -395,7 +395,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #F2F2F2;
+  color: #e4e4e4;
 }
 .container .footer .socialNetworks button {
   height: auto;
@@ -418,7 +418,7 @@
 .canvas {
   height: 100vh;
   width: 100vw;
-  background-color: #3F4B59;
+  background-color: #e4e4e4;
   z-index: 1;
   position: absolute;
 }

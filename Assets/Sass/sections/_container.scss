@@ -39,85 +39,86 @@
           $fs: 17px
         );
         transform: scale(1);
-        transition: .3s;
-        &:hover{
-          transform: scale(.9);
-          transition: .3s;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(0.9);
+          transition: 0.3s;
           background-color: $bg-5;
         }
       }
     }
   }
-  .animationMain{
+  .animationMain {
     grid-area: animation;
     padding: 80px 20% 0 0;
     position: relative;
     animation: 2s animationMain 0.5s ease-in;
-    .shadow{
+    .shadow {
       width: 360px;
       height: 360px;
       border-radius: 50%;
       background-color: #000;
       position: absolute;
-      box-shadow: rgba(0, 0, 0, 0.6) 0px 19px 38px, rgba(0, 0, 0, 0.6) 0px 15px 20px;
+      box-shadow: rgba(0, 0, 0, 0.6) 0px 19px 38px,
+        rgba(0, 0, 0, 0.6) 0px 15px 20px;
       top: 70px;
       left: 160px;
     }
-    .covid{
+    .covid {
       width: 540px;
       height: 537px;
       position: absolute;
       top: 0;
       left: 60px;
-      .protein{
+      .protein {
         animation: 10s protein 2s ease-in-out infinite;
         background-size: cover;
         width: 100%;
         height: 100%;
         position: relative;
-        .protein-1{
-          @include protein($s: 60px, $bg:#FF005E);
-          border: 8px solid #fff;
+        .protein-1 {
+          @include protein($s: 60px, $bg: $bg-5);
+          border: 8px solid  $bg-4;
           top: 120px;
           left: 250px;
-          animation: 2s protein1 .5s infinite;
+          animation: 2s protein1 0.5s infinite;
         }
-        .protein-2{
-          @include protein($s: 20px, $bg:#FF005E);
-          border: 6px solid #fff;
+        .protein-2 {
+          @include protein($s: 20px, $bg: $bg-5);
+          border: 6px solid  $bg-4;
           bottom: 150px;
           left: 300px;
-          animation: 2s protein2 .5s infinite;
+          animation: 2s protein2 0.5s infinite;
         }
-        .protein-3{
-          @include protein($s: 16px, $bg:#007300);
+        .protein-3 {
+          @include protein($s: 16px, $bg: $bg-5);
           bottom: 255px;
           left: 160px;
-          animation: 2s protein3 .5s infinite;
+          animation: 2s protein3 0.5s infinite;
         }
-        .protein-4{
-          @include protein($s: 10px, $bg:#007300);
+        .protein-4 {
+          @include protein($s: 10px, $bg: $bg-5);
           bottom: 250px;
           left: 280px;
-          animation: 2s protein4 .5s infinite;
+          animation: 2s protein4 0.5s infinite;
         }
-        .protein-5{
-          @include protein($s: 16px, $bg:#007300);
+        .protein-5 {
+          @include protein($s: 16px, $bg: $bg-5);
           bottom: 230px;
           right: 100px;
-          animation: 2s protein5 .5s infinite;
+          animation: 2s protein5 0.5s infinite;
         }
-        .protein-6{
-          @include protein($s: 25px, $bg:#007300);
+        .protein-6 {
+          @include protein($s: 25px, $bg: $bg-5);
           top: 160px;
           right: 130px;
-          animation: 2s protein6 .5s infinite;
+          animation: 2s protein6 0.5s infinite;
         }
-        .protein-7{
-          @include protein($s: 5px, $bg:#007300);
+        .protein-7 {
+          @include protein($s: 5px, $bg: $bg-5);
           top: 120px;
           left: 180px;
-          animation: 2s protein7 .5s infinite;
+          animation: 2s protein7 0.5s infinite;
         }
       }
     }
@@ -168,7 +169,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        #TotalConfirmed{
+        #TotalConfirmed {
           font-weight: 600;
         }
       }
@@ -225,7 +226,7 @@
     padding: 0 10%;
     position: relative;
     animation: 2s footer 0.5s ease-in;
-    .topCountries{
+    .topCountries {
       position: absolute;
       top: -60px;
       color: $bg-4;
@@ -240,12 +241,12 @@
         li {
           button {
             .count {
-              background-color: $bg-3;
+              background-color: $bg-2;
               transition: 0.5s;
               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
-            .number{
-              background-color: $bg-3;
+            .number {
+              background-color: $bg-2;
               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
           }
@@ -255,7 +256,7 @@
                 background-color: $bg-7;
                 transition: 0.5s;
               }
-              .number{
+              .number {
                 background-color: $bg-1;
               }
             }
