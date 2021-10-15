@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap");
 .loader {
   display: none;
-  background-color: #262626;
+  background-color: #3F4B59;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -62,7 +62,7 @@
   height: 42px;
   width: 150px;
   border-radius: 5px;
-  background-color: #F2B90F;
+  background-color: #FF005E;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -74,7 +74,7 @@
 .container .navbar .navbar__content button:hover {
   transform: scale(0.9);
   transition: 0.3s;
-  background-color: #418fde;
+  background-color: #0c0c0c;
 }
 .container .animationMain {
   grid-area: animation;
@@ -190,7 +190,7 @@
   gap: 15px;
   height: 30px;
   border-radius: 20px;
-  background-color: #262626;
+  background-color: #3F4B59;
   width: 385px;
   color: #F2F2F2;
   font-size: 12px;
@@ -199,7 +199,7 @@
   height: 30px;
   width: auto;
   border-radius: 15px;
-  background-color: #F2B90F;
+  background-color: #FF005E;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -210,7 +210,7 @@
   font-weight: 600;
 }
 .container .main-content .update button:hover {
-  background-color: #727272;
+  background-color: #353535;
   transition: 0.3s;
 }
 .container .main-content .title {
@@ -254,7 +254,7 @@
   width: 91%;
   border-radius: none;
   background-color: transparent;
-  color: #262626;
+  color: #3F4B59;
   border: none;
   outline: none;
   font-size: 25px;
@@ -263,7 +263,7 @@
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background-color: #F2B90F;
+  background-color: #FF005E;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -272,7 +272,7 @@
   transition: 0.3s;
 }
 .container .main-content .search button:hover {
-  background-color: #727272;
+  background-color: #353535;
   transition: 0.3s;
 }
 .container .footer {
@@ -293,15 +293,23 @@
   align-items: flex-end;
   margin: 0;
   padding: 0;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .container .footer ul:hover li button .count {
-  background-color: #727272;
-  transition: 0.3s;
+  background-color: #353535;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container .footer ul:hover li button .number {
+  background-color: #64707D;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .container .footer ul:hover li:hover button .count {
-  background-color: #418fde;
-  transition: 0.3s;
+  background-color: #0c0c0c;
+  transition: 0.5s;
+}
+.container .footer ul:hover li:hover button .number {
+  background-color: #FF005E;
 }
 .container .footer ul li {
   position: relative;
@@ -355,7 +363,8 @@
   left: 0;
   height: 50px;
   width: 50px;
-  background-color: #F2B90F;
+  background-color: #FF005E;
+  color: #F2F2F2;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -366,7 +375,7 @@
 .container .footer ul li button .count {
   height: 30px;
   width: 196px;
-  background-color: #418fde;
+  background-color: #0c0c0c;
   color: #F2F2F2;
   position: absolute;
   bottom: 30px;
@@ -375,6 +384,7 @@
   align-items: center;
   gap: 10px;
   border-radius: 15px;
+  font-size: 13px;
 }
 .container .footer ul li button img {
   height: 55px;
@@ -400,14 +410,14 @@
   transition: 0.3s;
 }
 .container .footer .socialNetworks button:hover {
-  color: #262626;
+  color: #3F4B59;
   transition: 0.3s;
 }
 
 .canvas {
   height: 100vh;
   width: 100vw;
-  background-color: #F2F2F2;
+  background-color: #3F4B59;
   z-index: 1;
   position: absolute;
 }
@@ -422,7 +432,7 @@
   top: -415px;
   width: 150vh;
   height: 150vh;
-  background-color: #1a1a1a;
+  background-color: #172126;
   border-radius: 50%;
   transform: scale(1);
   animation: 2s circle 0.5s ease-in;
@@ -434,7 +444,7 @@
   width: 500px;
   height: 500px;
   border-radius: 100%;
-  background-color: #727272;
+  background-color: #172126;
   transform: scale(1);
   animation: 2s circle 0.5s ease-in;
 }
@@ -445,7 +455,7 @@
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  border: 10px solid #424242;
+  border: 10px solid #64707D;
   transform: scale(1);
   animation: 2s circle 0.5s ease-in;
 }

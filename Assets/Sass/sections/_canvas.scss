@@ -1,7 +1,7 @@
 .canvas {
   height: 100vh;
   width: 100vw;
-  background-color: $bg-4;
+  background-color: $bg-2;
   z-index: 1;
   position: absolute;
   .canvas__container {
@@ -26,7 +26,7 @@
       width: 500px;
       height: 500px;
       border-radius: 100%;
-      background-color: $bg-6;
+      background-color: $bg-5;
       transform: scale(1);
       animation: 2s circle 0.5s ease-in;
     }
