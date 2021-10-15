@@ -41,6 +41,18 @@ function search() {
     findCountry[0].NewDeaths.toLocaleString();
 }
 
+function dataGlobal(){
+  document.getElementById("title").innerText = 'Covid-19';
+  document.getElementById("TotalConfirmed").innerText =
+    global.TotalConfirmed.toLocaleString();
+  document.getElementById("NewConfirmed").innerText =
+    global.NewConfirmed.toLocaleString();
+  document.getElementById("TotalDeaths").innerText =
+    global.TotalDeaths.toLocaleString();
+  document.getElementById("NewDeaths").innerText =
+    global.NewDeaths.toLocaleString();
+}
+
 function limpiar() {
   document.getElementById("findCountry").value = " ";
 }
