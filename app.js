@@ -20,19 +20,17 @@ function toShowSearch(obj, country) {
     obj.TotalDeaths.toLocaleString();
   document.getElementById("NewDeaths").innerText =
     obj.NewDeaths.toLocaleString();
-    if(country){
-      document.getElementById("containerTitle").innerHTML = 
-      `
+  if (country) {
+    document.getElementById("containerTitle").innerHTML = `
         <h1 id="title" class="title">${obj.Country}</h1>
         <img id="imgCountry" class="imgCountry" src="https://flagcdn.com/${obj.CountryCode.toLowerCase()}.svg" alt="">
-      `
-    }else{
-      document.getElementById("containerTitle").innerHTML = 
-      `
+      `;
+  } else {
+    document.getElementById("containerTitle").innerHTML = `
         <h1 id="title" class="title">Covid-19</h1>
         <img id="imgCountry" class="imgGlobal" src="./Assets//Img/global.svg" alt="Global">
-      `
-    }
+      `;
+  }
 }
 
 function search() {
@@ -43,13 +41,12 @@ function search() {
   let findCountry = countries.filter((country) =>
     country.Slug.includes(inputValue)
   );
-  console.log(findCountry);
   document.getElementById("title").innerText = findCountry[0].Country;
   toShowSearch(findCountry[0], true);
 }
 
 function dataGlobal() {
-  toShowSearch(global, false)
+  toShowSearch(global, false);
 }
 
 function limpiar() {
@@ -68,4 +65,15 @@ function toUpper(str) {
 
 function convertWord(str) {
   return str.toLowerCase().trim().split(" ").join("-");
+}
+
+function bestCountries(arr){
+  arr.sort((a, b) => a - b).reverse().splice(0, 3)
+}
+
+
+function inputSearch(){
+  if(event.code == 'Enter'){
+    search()
+  }
 }

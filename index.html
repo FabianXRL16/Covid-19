@@ -26,15 +26,14 @@
     <section class="container">
       <nav class="navbar">
         <div class="navbar__content">
-          <a href="/">
-            <img src="./Assets/Img/logo.svg" alt="Logo" /></a>
+          <a href="/"> <img src="./Assets/Img/logo.svg" alt="Logo" /></a>
           <button onclick="dataGlobal()">Global</button>
         </div>
       </nav>
       <section class="animationMain">
         <div class="shadow"></div>
         <div class="covid">
-          <div class="protein" style="background-image: url('./Assets/Img/covid.svg');">
+          <div class="protein" style="background-image: url('./Assets/Img/covid.svg')">
             <div class="protein-1"></div>
             <div class="protein-2"></div>
             <div class="protein-3"></div>
@@ -72,7 +71,7 @@
           </div>
         </div>
         <div class="search">
-          <input type="text" name="search countries" id="findCountry" placeholder="Country to search..." />
+          <input type="text" name="search countries" onkeypress="inputSearch()" id="findCountry" placeholder="Country to search..." />
           <button onclick="search()"><i class="fas fa-search"></i></button>
         </div>
       </section>
@@ -111,9 +110,9 @@
           </li>
         </ul>
         <div class="socialNetworks">
-          <a href="https://www.instagram.com/fabian.xrl16/"  target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/_fxrl16"  target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://github.com/FabianXRL16"  target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/fabian.xrl16/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/_fxrl16" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/FabianXRL16" target="_blank"><i class="fab fa-github"></i></a>
           <p>©FXRL16</p>
         </div>
       </section>
