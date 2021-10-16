@@ -359,7 +359,7 @@
       align-items: center;
       gap: 10px;
       color: $bg-4;
-      button {
+      a {
         @include btn(
           $h: auto,
           $w: auto,
@@ -370,6 +370,7 @@
         );
         padding: 0;
         transition: 0.3s;
+        text-decoration: none;
         &:hover {
           color: $bg-1;
           transition: 0.3s;

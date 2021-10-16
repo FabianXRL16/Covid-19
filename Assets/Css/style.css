@@ -410,7 +410,7 @@
   gap: 10px;
   color: #e4e4e4;
 }
-.container .footer .socialNetworks button {
+.container .footer .socialNetworks a {
   height: auto;
   width: auto;
   border-radius: 5px;
@@ -422,8 +422,9 @@
   font-size: 17px;
   padding: 0;
   transition: 0.3s;
+  text-decoration: none;
 }
-.container .footer .socialNetworks button:hover {
+.container .footer .socialNetworks a:hover {
   color: #FF005E;
   transition: 0.3s;
 }
