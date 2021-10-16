@@ -156,9 +156,22 @@
         }
       }
     }
-    .title {
-      font-size: 50px;
-      margin: 50px 0 0;
+    .containerTitle{
+      display: flex;
+      align-items: flex-end;
+      .title {
+        font-size: 50px;
+        margin: 50px 0 0;
+      }
+      .imgCountry{
+        height: 35px;
+        margin: 0 0 20px 15px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
+      }
+      .imgGlobal{
+        height: 40px;
+        margin: 0 0 20px 15px;
+      }
     }
     .data {
       width: 90%;

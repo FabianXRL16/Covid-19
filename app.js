@@ -8,49 +8,48 @@ fetch(URL)
   .then((resp) => {
     countries = resp.Countries;
     global = resp.Global;
-    document.getElementById("TotalConfirmed").innerText =
-      global.TotalConfirmed.toLocaleString();
-    document.getElementById("NewConfirmed").innerText =
-      global.NewConfirmed.toLocaleString();
-    document.getElementById("TotalDeaths").innerText =
-      global.TotalDeaths.toLocaleString();
-    document.getElementById("NewDeaths").innerText =
-      global.NewDeaths.toLocaleString();
-    console.log(resp);
+    toShowSearch(global, false);
   });
+
+function toShowSearch(obj, country) {
+  document.getElementById("TotalConfirmed").innerText =
+    obj.TotalConfirmed.toLocaleString();
+  document.getElementById("NewConfirmed").innerText =
+    obj.NewConfirmed.toLocaleString();
+  document.getElementById("TotalDeaths").innerText =
+    obj.TotalDeaths.toLocaleString();
+  document.getElementById("NewDeaths").innerText =
+    obj.NewDeaths.toLocaleString();
+    if(country){
+      document.getElementById("containerTitle").innerHTML = 
+      `
+        <h1 id="title" class="title">${obj.Country}</h1>
+        <img id="imgCountry" class="imgCountry" src="https://flagcdn.com/${obj.CountryCode.toLowerCase()}.svg" alt="">
+      `
+    }else{
+      document.getElementById("containerTitle").innerHTML = 
+      `
+        <h1 id="title" class="title">Covid-19</h1>
+        <img id="imgCountry" class="imgGlobal" src="./Assets//Img/global.svg" alt="Global">
+      `
+    }
+}
 
 function search() {
   let inputValue = document.getElementById("findCountry").value;
   inputValue = convertWord(inputValue);
-  console.log(inputValue);
   limpiar();
   document.getElementById("findCountry").placeholder = "Country to search...";
   let findCountry = countries.filter((country) =>
     country.Slug.includes(inputValue)
   );
   console.log(findCountry);
-  document.getElementById("title").innerText =
-    findCountry[0].Country;
-  document.getElementById("TotalConfirmed").innerText =
-    findCountry[0].TotalConfirmed.toLocaleString();
-  document.getElementById("NewConfirmed").innerText =
-    findCountry[0].NewConfirmed.toLocaleString();
-  document.getElementById("TotalDeaths").innerText =
-    findCountry[0].TotalDeaths.toLocaleString();
-  document.getElementById("NewDeaths").innerText =
-    findCountry[0].NewDeaths.toLocaleString();
+  document.getElementById("title").innerText = findCountry[0].Country;
+  toShowSearch(findCountry[0], true);
 }
 
-function dataGlobal(){
-  document.getElementById("title").innerText = 'Covid-19';
-  document.getElementById("TotalConfirmed").innerText =
-    global.TotalConfirmed.toLocaleString();
-  document.getElementById("NewConfirmed").innerText =
-    global.NewConfirmed.toLocaleString();
-  document.getElementById("TotalDeaths").innerText =
-    global.TotalDeaths.toLocaleString();
-  document.getElementById("NewDeaths").innerText =
-    global.NewDeaths.toLocaleString();
+function dataGlobal() {
+  toShowSearch(global, false)
 }
 
 function limpiar() {

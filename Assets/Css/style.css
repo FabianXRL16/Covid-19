@@ -213,9 +213,22 @@
   background-color: #353535;
   transition: 0.3s;
 }
-.container .main-content .title {
+.container .main-content .containerTitle {
+  display: flex;
+  align-items: flex-end;
+}
+.container .main-content .containerTitle .title {
   font-size: 50px;
   margin: 50px 0 0;
+}
+.container .main-content .containerTitle .imgCountry {
+  height: 35px;
+  margin: 0 0 20px 15px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
+}
+.container .main-content .containerTitle .imgGlobal {
+  height: 40px;
+  margin: 0 0 20px 15px;
 }
 .container .main-content .data {
   width: 90%;
