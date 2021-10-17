@@ -475,24 +475,11 @@
   width: auto;
   border-radius: 5px;
   background-color: transparent;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  outline: none;
+  color: white;
   font-size: 17px;
-  position: relative;
-  overflow: hidden;
-  transition: 1ss ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   transition: 0.3s;
   text-decoration: none;
-}
-.container .footer .socialNetworks a span, .container .footer .socialNetworks a i {
-  z-index: 2;
-  position: absolute;
 }
 .container .footer .socialNetworks a:hover {
   color: #FF005E;

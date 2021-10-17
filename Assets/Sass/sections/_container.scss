@@ -404,14 +404,12 @@
       gap: 10px;
       color: $bg-4;
       a {
-        @include btn(
-          $h: auto,
-          $w: auto,
-          $br: 5px,
-          $bg: transparent,
-          $c: $white,
-          $fs: 17px
-        );
+        height: auto;
+        width: auto;
+        border-radius: 5px;
+        background-color: transparent;
+        color: white;
+        font-size: 17px;
         padding: 0;
         transition: 0.3s;
         text-decoration: none;
