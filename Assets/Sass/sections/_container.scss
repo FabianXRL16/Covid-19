@@ -150,24 +150,36 @@
       height: 30px;
       border-radius: 20px;
       background-color: $bg-2;
-      width: 385px;
+      width: 395px;
       color: $bg-4;
       font-size: 12px;
       button {
         @include btn(
           $h: 30px,
-          $w: auto,
+          $w: 70px,
           $br: 15px,
           $bg: $bg-1,
           $c: $white,
           $fs: 12px
         );
         padding: 0 15px;
-        transition: 0.3s;
         font-weight: 600;
-        &:hover {
+        &::after{
+          content: "";
+          position: absolute;
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
           background-color: $bg-6;
-          transition: 0.3s;
+          z-index: 1;
+          transform: scale(0);
+          transition: .5s;
+        }
+        &:hover{
+          &::after{
+            transform: scale(1);
+            transition: .5s;
+          }
         }
       }
     }

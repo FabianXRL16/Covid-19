@@ -75,7 +75,7 @@
   justify-content: center;
   align-items: center;
 }
-.container .navbar .navbar__content button span {
+.container .navbar .navbar__content button span, .container .navbar .navbar__content button i {
   z-index: 2;
   position: absolute;
 }
@@ -214,13 +214,13 @@
   height: 30px;
   border-radius: 20px;
   background-color: #3F4B59;
-  width: 385px;
+  width: 395px;
   color: #e4e4e4;
   font-size: 12px;
 }
 .container .main-content .update button {
   height: 30px;
-  width: auto;
+  width: 70px;
   border-radius: 15px;
   background-color: #FF005E;
   color: #fff;
@@ -235,16 +235,26 @@
   justify-content: center;
   align-items: center;
   padding: 0 15px;
-  transition: 0.3s;
   font-weight: 600;
 }
-.container .main-content .update button span {
+.container .main-content .update button span, .container .main-content .update button i {
   z-index: 2;
   position: absolute;
 }
-.container .main-content .update button:hover {
+.container .main-content .update button::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
   background-color: #353535;
-  transition: 0.3s;
+  z-index: 1;
+  transform: scale(0);
+  transition: 0.5s;
+}
+.container .main-content .update button:hover::after {
+  transform: scale(1);
+  transition: 0.5s;
 }
 .container .main-content .containerTitle {
   display: flex;
@@ -323,7 +333,7 @@
   align-items: center;
   transition: 0.3s;
 }
-.container .main-content .search button span {
+.container .main-content .search button span, .container .main-content .search button i {
   z-index: 2;
   position: absolute;
 }
@@ -420,7 +430,7 @@
   align-items: flex-start;
   padding-top: 15px;
 }
-.container .footer ul li button span {
+.container .footer ul li button span, .container .footer ul li button i {
   z-index: 2;
   position: absolute;
 }
@@ -483,7 +493,7 @@
   transition: 0.3s;
   text-decoration: none;
 }
-.container .footer .socialNetworks a span {
+.container .footer .socialNetworks a span, .container .footer .socialNetworks a i {
   z-index: 2;
   position: absolute;
 }
