@@ -1,0 +1,53 @@
+@import "./vars";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.print {
+  background-image: url(../Img/printBackground.svg);
+  background-size: cover;
+  height: 500px;
+  width: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  position: relative;
+  img {
+    height: 40px;
+    left: 40px;
+    top: 40px;
+    position: absolute;
+  }
+  .containerPrint {
+    width: 350px;
+    h1 {
+      text-align: center;
+      color: $bg-1;
+      font-size: 40px;
+    }
+    .containerPrint__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h4 {
+        margin: 10px 0;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.author {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: $bg-1;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: o auto;
+}
