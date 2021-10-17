@@ -38,12 +38,27 @@
           $c: $white,
           $fs: 17px
         );
-        transform: scale(1);
-        transition: 0.3s;
-        &:hover {
-          transform: scale(0.9);
-          transition: 0.3s;
-          background-color: $bg-5;
+        &::after{
+          content: "";
+          width: 200px;
+          height:200px;
+          background-color: $bg-2;
+          z-index: 1;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto -25px;
+          position: absolute;
+          transform: scale(0);
+          transition: .5s;
+          border-radius: 50%;
+        }
+        &:hover{
+          &::after{
+            transform: scale(1);
+            transition: .5s;
+          }
         }
       }
     }

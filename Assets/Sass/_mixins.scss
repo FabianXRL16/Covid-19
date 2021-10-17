@@ -8,6 +8,16 @@
   cursor: pointer;
   outline: none;
   font-size: $fs;
+  position: relative;
+  overflow: hidden;
+  transition: 1ss ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span{
+    z-index: 2;
+    position: absolute;
+  }
 }
 
 @mixin input(
