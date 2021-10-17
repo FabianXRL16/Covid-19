@@ -422,26 +422,13 @@
   height: 90%;
   width: 220px;
   border-radius: none;
-  background-color: transparent;
-  color: #000;
   border: none;
-  cursor: pointer;
   outline: none;
-  font-size: 16px;
-  position: relative;
-  overflow: hidden;
-  transition: 1ss ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding-top: 15px;
-}
-.container .footer ul li button span, .container .footer ul li button i {
-  z-index: 2;
-  position: absolute;
 }
 .container .footer ul li button .number {
   position: absolute;

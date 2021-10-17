@@ -350,7 +350,12 @@
           }
         }
         button {
-          @include btn($h: 90%, $w: 220px, $br: none, $bg: transparent);
+          height: 90%;
+          width: 220px;
+          border-radius: none;
+          border: none;
+          outline: none;
+          background-color: transparent;
           display: flex;
           justify-content: center;
           align-items: flex-start;
