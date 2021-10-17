@@ -251,10 +251,21 @@
           $c: $white,
           $fs: 25px
         );
-        transition: 0.3s;
-        &:hover {
+        &::after{
+          content: "";
+          position: absolute;
+          width: 51px;
+          height: 51px;
+          border-radius: 50%;
           background-color: $bg-6;
-          transition: 0.3s;
+          transform: scale(0);
+          transition: .3s;
+        }
+        &:hover{
+          &::after{
+            transform: scale(1);
+            transition: .3s;
+          }
         }
       }
     }

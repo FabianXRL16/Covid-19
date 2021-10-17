@@ -331,14 +331,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
 }
 .container .main-content .search button span, .container .main-content .search button i {
   z-index: 2;
   position: absolute;
 }
-.container .main-content .search button:hover {
+.container .main-content .search button::after {
+  content: "";
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
   background-color: #353535;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.container .main-content .search button:hover::after {
+  transform: scale(1);
   transition: 0.3s;
 }
 .container .footer {
