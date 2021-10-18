@@ -9,8 +9,22 @@ fetch(URL)
     countries = resp.Countries;
     global = resp.Global;
     toShowSearch(global, false);
-    savePrint(global, false)
+    savePrint(global, false);
   });
+
+function date() {
+  let date = new Date();
+
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+
+  if (month < 10) {
+    document.getElementById("date").innerText =`${day}/0${month}/${year}`;
+  } else {
+    document.getElementById("date").innerText =`${day}/${month}/${year}`;
+  }
+}
 
 function toShowSearch(obj, country) {
   document.getElementById("TotalConfirmed").innerText =
@@ -64,12 +78,12 @@ function search() {
   );
   document.getElementById("title").innerText = findCountry[0].Country;
   toShowSearch(findCountry[0], true);
-  savePrint(findCountry[0], true)
+  savePrint(findCountry[0], true);
 }
 
 function dataGlobal() {
   toShowSearch(global, false);
-  savePrint(global, false)
+  savePrint(global, false);
 }
 
 function limpiar() {
@@ -90,21 +104,24 @@ function convertWord(str) {
   return str.toLowerCase().trim().split(" ").join("-");
 }
 
-function bestCountries(arr){
-  arr.sort((a, b) => a - b).reverse().splice(0, 3)
+function bestCountries(arr) {
+  arr
+    .sort((a, b) => a - b)
+    .reverse()
+    .splice(0, 3);
 }
 
-
-function inputSearch(){
-  if(event.code == 'Enter'){
-    search()
+function inputSearch() {
+  if (event.code == "Enter") {
+    search();
   }
 }
 
 function print() {
-  html2canvas(document.querySelector('.print'), {
-    onrendered: function(canvas) {
+  date()
+  html2canvas(document.querySelector(".print"), {
+    onrendered: function (canvas) {
       return Canvas2Image.saveAsPNG(canvas);
-    }
+    },
   });
 }
