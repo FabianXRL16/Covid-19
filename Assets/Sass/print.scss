@@ -4,50 +4,99 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $bg-4;
 }
 .print {
-  background-image: url(../Img/printBackground.svg);
-  background-size: cover;
-  height: 500px;
-  width: 500px;
-  padding: 20px;
-  box-sizing: border-box;
+  background-color: $bg-5;
+  width: 480px;
+  height: 640px;
   display: grid;
-  place-content: center;
-  border-radius: 10px;
-  position: relative;
-  img {
-    height: 40px;
-    left: 40px;
-    top: 40px;
-    position: absolute;
-  }
-  .containerPrint {
-    width: 350px;
-    h1 {
-      text-align: center;
-      color: $bg-1;
-      font-size: 40px;
+  grid-template-rows: auto 1fr auto;
+  padding: 50px;
+  box-sizing: border-box;
+  .header__print{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+      height: 40px;
     }
-    .containerPrint__item {
+  }
+  .container__print{
+    .title{
+      text-align: center;
+      font-size: 14px;
+      margin: 40px 0;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      h4 {
-        margin: 10px 0;
-        font-weight: 400;
+      flex-direction: column;
+      gap: 15px;
+      h1{
+        margin: 0;
+        font-size: 45px;
+        line-height: 50px;
+      }
+    }
+    .data{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 30px;
+      .itemMain{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        img{
+          height: 40px;
+        }
+        .itemMain__count{
+          text-align: center;
+          span{
+            font-size: 28px;
+            font-weight: 600;
+          }
+          .itemMain__label{
+            width: 110px;
+            border-radius: 5px;
+            background-color: $bg-4;
+            span{
+              font-size: 15px;
+              font-weight: 400;
+              color: $bg-5;
+            }
+          }
+        }
+      }
+      .itemNormal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color: $bg-3;
+        img{
+          height: 28px;
+        }
+        .itemNormal__count{
+          text-align: center;
+          font-weight: 600;
+          font-size: 18px;
+          .itemNormal__label{
+            font-weight: 400;
+            font-size: 14px;
+          }
+        }
       }
     }
   }
-}
-.author {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 13px;
-  color: $bg-1;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  margin: o auto;
+  .footer__print{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 200;
+    .year{
+      font-size: 12px;
+    }
+  }
 }
