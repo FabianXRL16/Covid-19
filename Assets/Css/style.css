@@ -491,7 +491,7 @@
   width: 100vw;
   background-color: #e4e4e4;
   z-index: 1;
-  position: absolute;
+  position: fixed;
 }
 .canvas .canvas__container {
   position: relative;
@@ -544,6 +544,101 @@
   top: 150px;
   right: 10px;
   animation: 2s circle 0.5s ease-in;
+}
+
+.print {
+  color: #e4e4e4;
+  background-image: url("../Img/printBackground.svg");
+  width: 480px;
+  height: 640px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.print .header__print {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.print .header__print img {
+  height: 40px;
+}
+.print .container__print .title {
+  text-align: center;
+  font-size: 14px;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.print .container__print .title h1 {
+  margin: 0;
+  font-size: 45px;
+  line-height: 50px;
+}
+.print .container__print .data {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+.print .container__print .data .itemMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.print .container__print .data .itemMain img {
+  height: 40px;
+}
+.print .container__print .data .itemMain .itemMain__count {
+  text-align: center;
+}
+.print .container__print .data .itemMain .itemMain__count span {
+  font-size: 28px;
+  font-weight: 600;
+}
+.print .container__print .data .itemMain .itemMain__count .itemMain__label {
+  width: 110px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  background-color: #e4e4e4;
+}
+.print .container__print .data .itemMain .itemMain__count .itemMain__label span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #172126;
+}
+.print .container__print .data .itemNormal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #64707D;
+}
+.print .container__print .data .itemNormal img {
+  height: 28px;
+}
+.print .container__print .data .itemNormal .itemNormal__count {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+.print .container__print .data .itemNormal .itemNormal__count .itemNormal__label {
+  font-weight: 400;
+  font-size: 14px;
+}
+.print .footer__print {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.print .footer__print .year {
+  font-size: 12px;
 }
 
 @keyframes loader {
@@ -698,14 +793,8 @@
     transform: scale(1.5);
   }
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #e4e4e4;
-}
-
 .print {
+  color: #e4e4e4;
   background-image: url("../Img/printBackground.svg");
   width: 480px;
   height: 640px;
@@ -759,6 +848,7 @@ body {
 }
 .print .container__print .data .itemMain .itemMain__count .itemMain__label {
   width: 110px;
+  padding-bottom: 5px;
   border-radius: 5px;
   background-color: #e4e4e4;
 }
@@ -810,6 +900,11 @@ body {
   position: relative;
   height: 100vh;
   width: 100vw;
+}
+.app .printt {
+  opacity: 0;
+  width: 600px;
+  height: 600px;
 }
 
 /*# sourceMappingURL=style.css.map */

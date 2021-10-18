@@ -9,6 +9,7 @@ fetch(URL)
     countries = resp.Countries;
     global = resp.Global;
     toShowSearch(global, false);
+    savePrint(global, false)
   });
 
 function toShowSearch(obj, country) {
@@ -33,6 +34,26 @@ function toShowSearch(obj, country) {
   }
 }
 
+function savePrint(obj, country) {
+  document.getElementById("print__totalCases").innerText =
+    obj.TotalConfirmed.toLocaleString();
+  document.getElementById("print__newCases").innerText =
+    obj.NewConfirmed.toLocaleString();
+  document.getElementById("print__totalDeaths").innerText =
+    obj.TotalDeaths.toLocaleString();
+  document.getElementById("print__newDeaths").innerText =
+    obj.NewDeaths.toLocaleString();
+  if (country) {
+    document.getElementById("print__title").innerHTML = `
+        <h1 id="print__title">${obj.Country}</h1>
+      `;
+  } else {
+    document.getElementById("print__title").innerHTML = `
+        <h1 id="print__title">Global</h1>
+      `;
+  }
+}
+
 function search() {
   let inputValue = document.getElementById("findCountry").value;
   inputValue = convertWord(inputValue);
@@ -43,10 +64,12 @@ function search() {
   );
   document.getElementById("title").innerText = findCountry[0].Country;
   toShowSearch(findCountry[0], true);
+  savePrint(findCountry[0], true)
 }
 
 function dataGlobal() {
   toShowSearch(global, false);
+  savePrint(global, false)
 }
 
 function limpiar() {
@@ -76,4 +99,12 @@ function inputSearch(){
   if(event.code == 'Enter'){
     search()
   }
+}
+
+function print() {
+  html2canvas(document.querySelector('.print'), {
+    onrendered: function(canvas) {
+      return Canvas2Image.saveAsPNG(canvas);
+    }
+  });
 }

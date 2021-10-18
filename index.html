@@ -8,6 +8,8 @@
   <title>Covid-19</title>
   <link rel="stylesheet" href="./Assets/Css/style.css" />
   <script src="https://kit.fontawesome.com/a3a61b758e.js" crossorigin="anonymous"></script>
+  <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -46,7 +48,7 @@
       </section>
       <section class="main-content">
         <div class="update">
-          <button><span>Update</span></button>
+          <button onclick="print()"><span>Print</span></button>
           <p>Get the lastet update of coronavirus (Covid-19)</p>
         </div>
         <div class="containerTitle" id="containerTitle">
@@ -123,8 +125,63 @@
       <div></div>
       <div></div>
     </section>
-    <!-- Modal -->
-    <section></section>
+    <!-- print -->
+    <section>
+      <div class="print">
+        <div class="header__print">
+          <img src="./Assets/Img/logo.svg" alt="FabCov Logo">
+          <span>12/oct/2021</span>
+        </div>
+        <div class="container__print">
+          <div class="title">
+            <span>Current information from</span>
+            <h1 id="print__title">Peru</h1>
+          </div>
+          <div class="data">
+            <div class="itemMain">
+              <img src="./Assets/Img/iconVirus.svg" alt="iconDeath">
+              <div class="itemMain__count">
+                <span id="print__newCases">12312</span>
+                <div class="itemMain__label">
+                  <span>New cases</span>
+                </div>
+              </div>
+            </div>
+            <div class="itemMain">
+              <img src="./Assets/Img/iconDeath.svg" alt="iconDeath">
+              <div class="itemMain__count">
+                <span id="print__newDeaths">12312</span>
+                <div class="itemMain__label">
+                  <span>New deaths</span>
+                </div>
+              </div>
+            </div>
+            <div class="itemNormal left">
+              <img src="./Assets/Img/iconVirusMin.svg" alt="iconVirus">
+              <div class="itemNormal__count">
+                <span id="print__totalCases">12312</span>
+                <div class="itemNormal__label">
+                  <span>Total cases</span>
+                </div>
+              </div>
+            </div>
+            <div class="itemNormal right">
+              <img src="./Assets/Img/iconDeathMin.svg" alt="iconDeath">
+              <div class="itemNormal__count">
+                <span id="print__totalDeaths">231.235.332</span>
+                <div class="itemNormal__label">
+                  <span>Total deaths</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__print">
+          <span>©Fabian Pacherres</span>
+          <span class="year">2021</span>
+        </div>
+      </div>
+    </section>
   </div>
   <script src="app.js"></script>
 </body>

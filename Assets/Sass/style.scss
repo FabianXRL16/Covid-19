@@ -2,6 +2,8 @@
 @import "./sections/container.scss";
 @import "./sections/canvas";
 
+@import "./print.scss";
+
 @import "./animations";
 @import "./vars.scss";
 @import "./print.scss";
@@ -19,4 +21,9 @@ body {
   position: relative;
   height: 100vh;
   width: 100vw;
+  .printt{
+    opacity: 0;
+    width: 600px;
+    height: 600px;
+  }
 }
