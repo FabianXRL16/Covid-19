@@ -203,7 +203,7 @@
     .data {
       width: 90%;
       display: grid;
-      column-gap: 60px;
+      column-gap: 40px;
       grid-template-columns: repeat(2, 1fr);
       .data__item {
         display: flex;
@@ -272,128 +272,117 @@
   }
   .footer {
     grid-area: footer;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
     padding: 0 10%;
     position: relative;
     animation: 2s footer 0.5s ease-in;
     .topCountries {
       position: absolute;
       top: -60px;
+      left: 10%;
       color: $bg-4;
     }
-    ul {
+    ul{
       display: flex;
-      align-items: flex-end;
       margin: 0;
       padding: 0;
-      transition: 0.5s;
-      &:hover {
-        li {
-          button {
-            .count {
-              background-color: $bg-2;
-              transition: 0.5s;
-              box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            }
-            .number {
-              background-color: $bg-2;
-              box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            }
-          }
-          &:hover {
-            button {
-              .count {
-                background-color: $bg-7;
-                transition: 0.5s;
+      list-style: none;
+      margin: 0 150px 20px 0;
+      transition: .3s;
+      &:hover{
+        li{
+          button{
+            &:hover{
+              .lower{
+                .pos{
+                  background-color: $bg-1;
+                  transition: .3s;
+                }
+                .count{
+                  background-color: $bg-2;
+                  transition: .3s;
+                }
               }
-              .number {
-                background-color: $bg-1;
+            }
+            .lower{
+              .pos{
+                background-color: $bg-3;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+              }
+              .count{
+                background-color: $bg-3;
               }
             }
           }
         }
       }
-      li {
-        position: relative;
-        width: 220px;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        transition: 0.3s;
-        &:nth-child(1) {
-          padding-right: 25px;
-          .count {
-            left: 20px;
+      li{
+        width: 33.5%;
+        &:nth-child(1){
+          button{
+            padding-right: 10px;
           }
         }
-        &:nth-child(2) {
-          padding: 0 25px;
-          button {
-            .number {
-              left: 25px;
-            }
-            .count {
-              left: 45px;
-            }
+        &:nth-child(2){
+          button{
+            padding: 0 5px;
           }
         }
-        &:nth-child(3) {
-          padding-left: 25px;
-          button {
-            .number {
-              left: 25px;
-            }
-            .count {
-              left: 45px;
-            }
+        &:nth-child(3){
+          button{
+            padding-left: 10px;
           }
         }
-        button {
-          height: 90%;
-          width: 220px;
-          border-radius: none;
+        button{
+          background-color: transparent;
+          cursor: pointer;
           border: none;
           outline: none;
-          background-color: transparent;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          padding-top: 15px;
-          cursor: pointer;
-          .number {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            height: 50px;
-            width: 50px;
-            background-color: $bg-1;
-            color: $bg-4;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 600;
-            font-size: 30px;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          display: grid;
+          grid-template-rows: 1fr 40px;
+          .higher{
+            height: 100%;
+            padding-top: 10px;
+            img{
+              height: 65px;
+            }
           }
-          .count {
-            height: 30px;
-            width: 196px;
-            background-color: $bg-7;
-            color: $bg-4;
-            position: absolute;
-            bottom: 30px;
+          .lower{
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 10px;
-            border-radius: 15px;
-            font-size: 13px;
-          }
-          img {
-            height: 55px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
-              rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            justify-content: flex-end;
+            position: relative;
+            .pos{
+              background-color: $bg-1;
+              color: $bg-4;
+              position: absolute;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 25px;
+              font-weight: 600;
+              left: 0;
+            }
+            .count{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              background-color: $bg-2;
+              border-radius: 15px;
+              width: 99%;
+              height: 30px;
+              margin-left: -20px;
+              font-size: 16px;
+              color: $bg-4;
+            }
           }
         }
       }
@@ -401,8 +390,12 @@
     .socialNetworks {
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: flex-end;
+      gap: 20px;
       color: $bg-4;
+      p{
+        font-size: 18px;
+      }
       a {
         height: auto;
         width: auto;
