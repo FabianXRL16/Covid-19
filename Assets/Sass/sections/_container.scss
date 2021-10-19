@@ -130,7 +130,7 @@
           animation: 2s protein6 0.5s infinite;
         }
         .protein-7 {
-          @include protein($s: 5px, $bg: $bg-5);
+          @include protein($s: 5px, $bg: $white);
           top: 120px;
           left: 180px;
           animation: 2s protein7 0.5s infinite;
@@ -192,12 +192,12 @@
       }
       .imgCountry{
         height: 35px;
-        margin: 0 0 20px 15px;
+        margin-left: 15px;
         box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
       }
       .imgGlobal{
         height: 40px;
-        margin: 0 0 20px 15px;
+        margin-left: 15px;
       }
     }
     .data {
@@ -288,7 +288,7 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      margin: 0 150px 20px 0;
+      margin: 0 13% 20px 0;
       transition: .3s;
       &:hover{
         li{
@@ -389,12 +389,14 @@
     }
     .socialNetworks {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: flex-end;
       gap: 20px;
       color: $bg-4;
+      padding-bottom:30px;
       p{
         font-size: 18px;
+        margin: 0;
       }
       a {
         height: auto;

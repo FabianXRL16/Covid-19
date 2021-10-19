@@ -1,98 +1,102 @@
 @import "./vars";
 
-.print {
-  color: $bg-4;
-  background-image: url('../Img/printBackground.svg');
-  width: 480px;
-  height: 640px;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  padding: 50px;
-  box-sizing: border-box;
-  .header__print{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img{
-      height: 40px;
-    }
-  }
-  .container__print{
-    .title{
-      text-align: center;
-      font-size: 14px;
-      margin: 40px 0;
+.boxPrint {
+  z-index: 0;
+  position: fixed;
+  .print {
+    color: $bg-4;
+    background-image: url("../Img/printBackground.svg");
+    width: 480px;
+    height: 640px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 50px;
+    box-sizing: border-box;
+    .header__print {
       display: flex;
-      flex-direction: column;
-      gap: 15px;
-      h1{
-        margin: 0;
-        font-size: 45px;
-        line-height: 50px;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        height: 40px;
       }
     }
-    .data{
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px 30px;
-      .itemMain{
+    .container__print {
+      .title {
+        text-align: center;
+        font-size: 14px;
+        margin: 40px 0;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        img{
-          height: 40px;
+        flex-direction: column;
+        gap: 15px;
+        h1 {
+          margin: 0;
+          font-size: 45px;
+          line-height: 50px;
         }
-        .itemMain__count{
-          text-align: center;
-          span{
-            font-size: 28px;
-            font-weight: 600;
+      }
+      .data {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 30px;
+        .itemMain {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          img {
+            height: 40px;
           }
-          .itemMain__label{
-            width: 110px;
-            padding-bottom: 5px;
-            border-radius: 5px;
-            background-color: $bg-4;
-            span{
-              font-size: 15px;
+          .itemMain__count {
+            text-align: center;
+            span {
+              font-size: 28px;
+              font-weight: 600;
+            }
+            .itemMain__label {
+              width: 110px;
+              padding-bottom: 2px;
+              border-radius: 5px;
+              background-color: $bg-4;
+              span {
+                font-size: 15px;
+                font-weight: 400;
+                color: $bg-5;
+              }
+            }
+          }
+        }
+        .itemNormal {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          color: $bg-3;
+          img {
+            height: 28px;
+          }
+          .itemNormal__count {
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            .itemNormal__label {
               font-weight: 400;
-              color: $bg-5;
+              font-size: 14px;
             }
           }
         }
       }
-      .itemNormal{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        color: $bg-3;
-        img{
-          height: 28px;
-        }
-        .itemNormal__count{
-          text-align: center;
-          font-weight: 600;
-          font-size: 18px;
-          .itemNormal__label{
-            font-weight: 400;
-            font-size: 14px;
-          }
-        }
-      }
     }
-  }
-  .footer__print{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 14px;
-    font-weight: 200;
-    .year{
-      font-size: 12px;
+    .footer__print {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 14px;
+      font-weight: 200;
+      .year {
+        font-size: 12px;
+      }
     }
   }
 }
