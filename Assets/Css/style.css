@@ -32,6 +32,8 @@
 
 .container {
   z-index: 2;
+  position: relative;
+  height: 100vh;
   display: grid;
   grid-template-rows: 15% 65% 20%;
   grid-template-columns: 50% 50%;
