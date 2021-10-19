@@ -225,11 +225,8 @@
     }
   }
   .container {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
     display: grid;
-    grid-template-rows: 15vh 50vh 35vh;
+    grid-template-rows: 15% 50% 35%;
     .navbar {
       height: 100%;
       width: 100%;
@@ -333,7 +330,7 @@
 
 @media (max-width: 530px) {
   .container {
-    grid-template-rows: 15vh 75vh 10vh;
+    grid-template-rows: 15vh 1fr 10vh;
     .main-content {
       .update {
         font-size: 10px;
