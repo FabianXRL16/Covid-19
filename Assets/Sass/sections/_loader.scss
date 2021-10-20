@@ -1,11 +1,10 @@
 @import "../vars.scss";
 
 .loader {
-  display: none;
   background-color: $bg-4;
-  position: fixed;
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;

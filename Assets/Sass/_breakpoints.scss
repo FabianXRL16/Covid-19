@@ -19,7 +19,7 @@
     z-index: 2;
     height: 100vh;
     width: 100vw;
-    position: fixed;
+    position: absolute;
     display: grid;
     grid-template-rows: 15% 65% 20%;
     grid-template-columns: 100%;
@@ -326,6 +326,12 @@
       }
     }
   }
+  .loader {
+    background-color: $bg-5;
+    div {
+      background-color: $bg-4;
+    }
+  }
 }
 
 @media (max-width: 530px) {
@@ -358,76 +364,3 @@
     }
   }
 }
-
-// @media (max-width: 1000px) {
-//   .canvas {
-//     display: none;
-//   }
-//   .container {
-//     grid-template-columns: 100%;
-//     grid-template-areas:
-//       "nav"
-//       "container"
-//       "footer";
-//     .navbar {
-//       .navbar__content {
-//         padding: 0 5%;
-//       }
-//     }
-//     .animationMain {
-//       position: absolute;
-//       width: 120px;
-//       top: 140px;
-//       right: 5%;
-//       .shadow {
-//         width: 200px;
-//         height: 200px;
-//         top: 34px;
-//         left: 55px;
-//       }
-//       .covid {
-//         width: 300px;
-//         height: 299px;
-//         left: 0;
-//       }
-//     }
-//     .main-content {
-//       grid-area: container;
-//       padding: 20px 0 0 5%;
-//       color: $bg-4;
-//       animation: 2s mainContent 0.5s ease-in;
-//       .update {
-//       }
-//       .containerTitle {
-//         .title {
-//           margin-top: 40px;
-//         }
-//         .imgCountry {
-//         }
-//         .imgGlobal {
-//         }
-//       }
-//       .data {
-//         width: calc(95% - 320px);
-//         display: grid;
-//         grid-template-columns: repeat(1, 1fr);
-//         grid-template-rows: repeat(4, 40px);
-//         .data__item {
-//         }
-//       }
-//       .search {
-//         padding: 1px 5px 0 25px;
-//         width: 95%;
-//         margin-top: 20px;
-//       }
-//     }
-//   }
-//   .loader {
-//     display: none;
-//   }
-//   section {
-//     .print {
-//       display: none;
-//     }
-//   }
-// }
