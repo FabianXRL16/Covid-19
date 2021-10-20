@@ -3,6 +3,8 @@
 .boxPrint {
   z-index: 0;
   position: fixed;
+  width: 100vw;
+  height: 100vh;
   .print {
     color: $bg-4;
     background-image: url("../Img/printBackground.svg");
@@ -96,6 +98,134 @@
       font-weight: 200;
       .year {
         font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .boxPrint { 
+    .print {
+      width: 100vw;
+      height: 133.33vw;
+      background-position-x: center;
+      background-position-y: top;
+      background-size: calc(100vw);
+      background-repeat: repeat;
+      color: $bg-4;
+      padding: 30px 20px;
+      .header__print {
+        img {
+          height: 30px;
+        }
+      }
+      .container__print {
+        .title {
+          font-size: 12px;
+          margin: 30px 0;
+          gap: 10px;
+          h1 {
+            font-size: 35px;
+            line-height: 40px;
+          }
+        }
+        .data {
+          gap: 30px 20px;
+          .itemMain {
+            gap: 15px;
+            img {
+              height: 30px;
+            }
+            .itemMain__count {
+              span {
+                font-size: 21px;
+              }
+              .itemMain__label {
+                width: 90px;
+                span {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+          .itemNormal {
+            gap: 10px;
+            img {
+              height: 22px;
+            }
+            .itemNormal__count {
+              font-size: 16px;
+              .itemNormal__label {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+      .footer__print {
+        gap: 3px;
+        font-size: 12px;
+        .year {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .boxPrint { 
+    .print {
+      background-size: contain;
+      padding: 20px;
+      .header__print {
+        img {
+          height: 30px;
+        }
+      }
+      .container__print {
+        .title {
+          font-size: 10px;
+          margin: 30px 0;
+          gap: 10px;
+          h1 {
+            font-size: 25px;
+            line-height: 40px;
+          }
+        }
+        .data {
+          gap: 20px 10px;
+          .itemMain {
+            gap: 12px;
+            img {
+              height: 20px;
+            }
+            .itemMain__count {
+              span {
+                font-size: 17px;
+              }
+              .itemMain__label {
+                width: 70px;
+                padding-bottom: 2px;
+                line-height: 15px;
+                span {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+          .itemNormal {
+            img {
+              height: 16px;
+            }
+            .itemNormal__count {
+              font-size: 13px;
+              .itemNormal__label {
+                font-size: 10px;
+              }
+            }
+          }
+        }
       }
     }
   }

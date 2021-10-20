@@ -1,152 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="./Assets/Css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a3a61b758e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <meta
+      name="description"
+      content="Minigame that consists of touching the bears as many times as possible in 10 seconds"
+    />
+    <meta name="keywords" content="covid-19, coronavirus" />
+    <meta name="author" content="Fabian Pacherres" />
+    <meta name="copyright" content="Copyright owner" />
+    <meta name="theme-color" content="#172126" />
+    <link rel="shortcut icon" href="./Assets/Img/icon.svg" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Covid-19</title>
-  <link rel="stylesheet" href="./Assets/Css/style.css" />
-  <script src="https://kit.fontawesome.com/a3a61b758e.js" crossorigin="anonymous"></script>
-  <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-  <meta name="description"
-    content="Minigame that consists of touching the bears as many times as possible in 10 seconds" />
-  <meta name="keywords" content="covid-19, coronavirus" />
-  <meta name="author" content="Fabian Pacherres" />
-  <meta name="copyright" content="Copyright owner" />
-  <meta name="theme-color" content="#172126">
-  <link rel="shortcut icon" href="./Assets/Img/icon.svg" />
-</head>
-
-<body>
-  <div class="app">
-    <!-- Main Content -->
-    <div class="canvas">
-      <div class="canvas__container">
-        <div class="large-circle"></div>
-        <div class="medium-circle"></div>
-        <div class="small-circle"></div>
-        <img class="large-points" src="./Assets/Img/points.svg" alt="" />
-        <img class="small-points" src="./Assets/Img/points.svg" alt="" />
+  <body>
+    <div class="app">
+      <!-- Main Content -->
+      <div class="canvas">
+        <div class="canvas__container">
+          <div class="large-circle"></div>
+          <div class="medium-circle"></div>
+          <div class="small-circle"></div>
+          <img class="large-points" src="./Assets/Img/points.svg" alt="" />
+          <img class="small-points" src="./Assets/Img/points.svg" alt="" />
+        </div>
       </div>
-    </div>
-    <!-- Main Content -->
-    <section class="container">
-      <nav class="navbar">
-        <div class="navbar__content">
-          <a href="/"> <img src="./Assets/Img/logo.svg" alt="Logo" /></a>
-          <button onclick="dataGlobal()"><span>Global</span></button>
-        </div>
-      </nav>
-      <section class="animationMain">
-        <div class="shadow"></div>
-        <div class="covid">
-          <div class="protein" style="background-image: url('./Assets/Img/covid.svg')">
-            <div class="protein-1"></div>
-            <div class="protein-2"></div>
-            <div class="protein-3"></div>
-            <div class="protein-4"></div>
-            <div class="protein-5"></div>
-            <div class="protein-6"></div>
-            <div class="protein-7"></div>
+      <!-- Main Content -->
+      <section class="container">
+        <nav class="navbar">
+          <div class="navbar__content">
+            <a href="/"> <img src="./Assets/Img/logo.svg" alt="Logo" /></a>
+            <button onclick="dataGlobal()"><span>Global</span></button>
           </div>
-        </div>
-      </section>
-      <section class="main-content">
-        <div class="update">
-          <button onclick="print()"><span>Print</span></button>
-          <p>Current coronavirus information (Covid-19)</p>
-        </div>
-        <div class="containerTitle" id="containerTitle">
-          <h1 id="title" class="title">Covid-19</h1>
-        </div>
-        <div class="data">
-          <div class="data__item">
-            <span>Total cases</span>
-            <p id="TotalConfirmed">12342</p>
+        </nav>
+        <section class="animationMain">
+          <div class="shadow"></div>
+          <div class="covid">
+            <div
+              class="protein"
+              style="background-image: url('./Assets/Img/covid.svg')"
+            >
+              <div class="protein-1"></div>
+              <div class="protein-2"></div>
+              <div class="protein-3"></div>
+              <div class="protein-4"></div>
+              <div class="protein-5"></div>
+              <div class="protein-6"></div>
+              <div class="protein-7"></div>
+            </div>
           </div>
-          <div class="data__item">
-            <span>New cases</span>
-            <p id="NewConfirmed">12342</p>
+        </section>
+        <section class="main-content">
+          <div class="update">
+            <button onclick="print()"><span>Print</span></button>
+            <p>Current coronavirus information (Covid-19)</p>
           </div>
-          <div class="data__item">
-            <span>Total deaths</span>
-            <p id="TotalDeaths">12342</p>
+          <div class="containerTitle" id="containerTitle">
+            <h1 id="title" class="title">Covid-19</h1>
           </div>
-          <div class="data__item">
-            <span>New deaths</span>
-            <p id="NewDeaths">12342</p>
+          <div class="data">
+            <div class="data__item">
+              <span>Total cases</span>
+              <p id="TotalConfirmed">12342</p>
+            </div>
+            <div class="data__item">
+              <span>New cases</span>
+              <p id="NewConfirmed">12342</p>
+            </div>
+            <div class="data__item">
+              <span>Total deaths</span>
+              <p id="TotalDeaths">12342</p>
+            </div>
+            <div class="data__item">
+              <span>New deaths</span>
+              <p id="NewDeaths">12342</p>
+            </div>
           </div>
-        </div>
-        <div class="search">
-          <input type="text" name="search countries" onkeypress="inputSearch()" id="findCountry"
-            placeholder="Country to search..." />
-          <button onclick="search()"><i class="fas fa-search"></i></button>
-        </div>
-      </section>
-      <section class="footer">
-        <p class="topCountries">Most affected</p>
-        <ul>
-          <li>
-            <button>
-              <div class="higher">
-                <img src="https://flagcdn.com/us.svg" alt="Peru" />
-              </div>
-              <div class="lower">
-                <div class="pos"><span>1</span></div>
-                <div class="count">
-                  <i class="fas fa-virus"></i>
-                  <p>69413241</p>
+          <div class="search">
+            <input
+              type="text"
+              name="search countries"
+              onkeypress="inputSearch()"
+              id="findCountry"
+              placeholder="Country to search..."
+            />
+            <button onclick="search()"><i class="fas fa-search"></i></button>
+          </div>
+        </section>
+        <section class="footer">
+          <p class="topCountries">Most affected</p>
+          <ul>
+            <li>
+              <button>
+                <div class="higher">
+                  <img src="https://flagcdn.com/us.svg" alt="Peru" />
                 </div>
-              </div>
-            </button>
-          </li>
-          <li>
-            <button>
-              <div class="higher">
-                <img src="https://flagcdn.com/in.svg" alt="Peru" />
-              </div>
-              <div class="lower">
-                <div class="pos"><span>2</span></div>
-                <div class="count">
-                  <i class="fas fa-virus"></i>
-                  <p>69413241</p>
+                <div class="lower">
+                  <div class="pos"><span>1</span></div>
+                  <div class="count">
+                    <i class="fas fa-virus"></i>
+                    <p>69413241</p>
+                  </div>
                 </div>
-              </div>
-            </button>
-          </li>
-          <li>
-            <button>
-              <div class="higher">
-                <img src="https://flagcdn.com/br.svg" alt="Peru" />
-              </div>
-              <div class="lower">
-                <div class="pos"><span>3</span></div>
-                <div class="count">
-                  <i class="fas fa-virus"></i>
-                  <p>69413241</p>
+              </button>
+            </li>
+            <li>
+              <button>
+                <div class="higher">
+                  <img src="https://flagcdn.com/in.svg" alt="Peru" />
                 </div>
-              </div>
-            </button>
-          </li>
-        </ul>
-        <div class="socialNetworks">
-          <a href="https://www.instagram.com/fabian.xrl16/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/_fxrl16" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://github.com/FabianXRL16" target="_blank"><i class="fab fa-github"></i></a>
-          <p>©FXRL16</p>
-        </div>
+                <div class="lower">
+                  <div class="pos"><span>2</span></div>
+                  <div class="count">
+                    <i class="fas fa-virus"></i>
+                    <p>69413241</p>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <div class="higher">
+                  <img src="https://flagcdn.com/br.svg" alt="Peru" />
+                </div>
+                <div class="lower">
+                  <div class="pos"><span>3</span></div>
+                  <div class="count">
+                    <i class="fas fa-virus"></i>
+                    <p>69413241</p>
+                  </div>
+                </div>
+              </button>
+            </li>
+          </ul>
+          <div class="socialNetworks">
+            <a href="https://www.instagram.com/fabian.xrl16/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://twitter.com/_fxrl16" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://github.com/FabianXRL16" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <p>©FXRL16</p>
+          </div>
+        </section>
       </section>
-    </section>
-    <!-- Loader -->
-    <section class="loader">
-      <div></div>
-      <div></div>
-      <div></div>
-    </section>
-    <!-- print -->
-    <section class="boxPrint">
+      <!-- Loader -->
+      <section class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+      <!-- print -->
+      <section class="boxPrint">
         <div class="print">
           <div class="header__print">
             <img src="./Assets/Img/logo.svg" alt="FabCov Logo" />
@@ -202,8 +220,7 @@
           </div>
         </div>
       </section>
-  </div>
-  <script src="app.js"></script>
-</body>
-
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
