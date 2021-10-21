@@ -3,14 +3,20 @@ const URL = "https://api.covid19api.com/summary";
 let countries = [];
 let global = {};
 
-fetch(URL)
-  .then((response) => response.json())
-  .then((resp) => {
-    countries = resp.Countries;
-    global = resp.Global;
+const init = async (url) => {
+  try {
+    const data = await fetch(url);
+    const info = await data.json();
+    countries = await info.Countries;
+    global = await info.Global;
     toShowSearch(global, false);
     mostAffected();
-  });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+init(URL);
 
 function date() {
   let date = new Date();
@@ -133,8 +139,9 @@ function mostAffected() {
     .reverse()
     .splice(0, 3);
   let ul = document.querySelector("#bestCountry");
-  let li = bestCountries.map((i, pos) => 
-    `
+  let li = bestCountries.map(
+    (i, pos) =>
+      `
       <li>
         <button>
           <div class="higher">
@@ -151,6 +158,7 @@ function mostAffected() {
           </div>
         </button>
       </li>
-    `);
-  ul.innerHTML = li
+    `
+  );
+  ul.innerHTML = li;
 }
