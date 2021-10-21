@@ -9,7 +9,6 @@ fetch(URL)
     countries = resp.Countries;
     global = resp.Global;
     toShowSearch(global, false);
-    savePrint(global, false);
   });
 
 function date() {
@@ -87,7 +86,7 @@ function dataGlobal() {
 }
 
 function limpiar() {
-  document.getElementById("findCountry").value = " ";
+  document.getElementById("findCountry").value = "";
 }
 
 function toUpper(str) {
@@ -119,6 +118,7 @@ function inputSearch() {
 
 function print() {
   date()
+  savePrint(global, false);
   html2canvas(document.querySelector(".print"), {
     onrendered: function (canvas) {
       return Canvas2Image.saveAsPNG(canvas);
