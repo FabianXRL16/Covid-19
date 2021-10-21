@@ -9,6 +9,7 @@ fetch(URL)
     countries = resp.Countries;
     global = resp.Global;
     toShowSearch(global, false);
+    mostAffected();
   });
 
 function date() {
@@ -19,9 +20,9 @@ function date() {
   let year = date.getFullYear();
 
   if (month < 10) {
-    document.getElementById("date").innerText =`${day}/0${month}/${year}`;
+    document.getElementById("date").innerText = `${day}/0${month}/${year}`;
   } else {
-    document.getElementById("date").innerText =`${day}/${month}/${year}`;
+    document.getElementById("date").innerText = `${day}/${month}/${year}`;
   }
 }
 
@@ -117,11 +118,39 @@ function inputSearch() {
 }
 
 function print() {
-  date()
+  date();
   savePrint(global, false);
   html2canvas(document.querySelector(".print"), {
     onrendered: function (canvas) {
       return Canvas2Image.saveAsPNG(canvas);
     },
   });
+}
+
+function mostAffected() {
+  let bestCountries = countries
+    .sort((a, b) => a.TotalConfirmed - b.TotalConfirmed)
+    .reverse()
+    .splice(0, 3);
+  let ul = document.querySelector("#bestCountry");
+  let li = bestCountries.map((i, pos) => 
+    `
+      <li>
+        <button>
+          <div class="higher">
+            <img id="imgBestCountry" src="https://flagcdn.com/${i.CountryCode.toLowerCase()}.svg"
+              alt="${i.Country} flag." />
+          </div>
+          <div class="lower">
+            <div class="pos"><span>${pos + 1}</span>
+            </div>
+            <div class="count">
+              <i class="fas fa-virus"></i>
+              <p>${i.TotalConfirmed.toLocaleString()}</p>
+            </div>
+          </div>
+        </button>
+      </li>
+    `);
+  ul.innerHTML = li
 }
