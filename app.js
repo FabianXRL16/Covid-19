@@ -5,12 +5,12 @@ let global = {};
 
 const init = async (url) => {
   try {
-    const data = await fetch(url);
-    const info = await data.json();
-    countries = await info.Countries;
-    global = await info.Global;
+    const data = await (await fetch(url)).json();
+    countries = await data.Countries;
+    global = await data.Global;
     toShowSearch(global, false);
     mostAffected();
+    savePrint(global, false);
   } catch (error) {
     console.error(error);
   }
@@ -78,7 +78,6 @@ function search() {
   let inputValue = document.getElementById("findCountry").value;
   inputValue = convertWord(inputValue);
   limpiar();
-  document.getElementById("findCountry").placeholder = "Country to search...";
   let findCountry = countries.filter((country) =>
     country.Slug.includes(inputValue)
   );
@@ -125,7 +124,6 @@ function inputSearch() {
 
 function print() {
   date();
-  savePrint(global, false);
   html2canvas(document.querySelector(".print"), {
     onrendered: function (canvas) {
       return Canvas2Image.saveAsPNG(canvas);
