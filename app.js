@@ -148,7 +148,7 @@ function mostAffected() {
       </li>
     `
   );
-  ul.innerHTML = li;
+  ul.innerHTML = li.join("");
 }
 
 function toShowBest(bestCountry){
