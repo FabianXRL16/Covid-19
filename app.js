@@ -135,13 +135,13 @@ function mostAffected() {
   let bestCountries = countries
     .sort((a, b) => a.TotalConfirmed - b.TotalConfirmed)
     .reverse()
-    .splice(0, 3);
+    .slice(0, 3);
   let ul = document.querySelector("#bestCountry");
   let li = bestCountries.map(
     (i, pos) =>
       `
       <li>
-        <button>
+        <button onclick="toShowBest('${i.Slug}')">
           <div class="higher">
             <img id="imgBestCountry" src="https://flagcdn.com/${i.CountryCode.toLowerCase()}.svg"
               alt="${i.Country} flag." />
@@ -159,4 +159,13 @@ function mostAffected() {
     `
   );
   ul.innerHTML = li;
+}
+
+function toShowBest(bestCountry){
+  let findCountry = countries.filter((country) =>
+    country.Slug.includes(bestCountry)
+  );
+  document.getElementById("title").innerText = findCountry[0].Country;
+  toShowSearch(findCountry[0], true);
+  savePrint(findCountry[0], true);
 }
