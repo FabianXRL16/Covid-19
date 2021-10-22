@@ -81,9 +81,14 @@ function search() {
   let findCountry = countries.filter((country) =>
     country.Slug.includes(inputValue)
   );
-  document.getElementById("title").innerText = findCountry[0].Country;
-  toShowSearch(findCountry[0], true);
-  savePrint(findCountry[0], true);
+  if(findCountry.length > 0){
+    document.getElementById("title").innerText = findCountry[0].Country;
+    toShowSearch(findCountry[0], true);
+    savePrint(findCountry[0], true);
+  }else{
+    let msg = new Error("I'm sorry!!!, country not found")
+    console.error(msg)
+  }
 }
 
 function dataGlobal() {
