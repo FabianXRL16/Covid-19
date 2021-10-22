@@ -95,25 +95,8 @@ function limpiar() {
   document.getElementById("findCountry").value = "";
 }
 
-function toUpper(str) {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map((word) => {
-      return word[0].toUpperCase() + word.substr(1);
-    })
-    .join(" ");
-}
-
 function convertWord(str) {
   return str.toLowerCase().trim().split(" ").join("-");
-}
-
-function bestCountries(arr) {
-  arr
-    .sort((a, b) => a - b)
-    .reverse()
-    .splice(0, 3);
 }
 
 let inputEnter = document.querySelector('#findCountry');
