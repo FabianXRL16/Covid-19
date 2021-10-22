@@ -116,11 +116,13 @@ function bestCountries(arr) {
     .splice(0, 3);
 }
 
-function inputSearch() {
-  if (event.code == "Enter") {
+let inputEnter = document.querySelector('#findCountry');
+
+inputEnter.addEventListener('keyup', (e)=>{
+  if(e.keyCode === 13){
     search();
   }
-}
+})
 
 function print() {
   date();
