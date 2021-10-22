@@ -261,19 +261,23 @@
 .container .main-content .containerTitle {
   display: flex;
   align-items: flex-end;
+  width: 120%;
+  padding-bottom: 10px;
 }
 .container .main-content .containerTitle .title {
   font-size: 50px;
-  margin: 50px 0 0;
+  line-height: 50px;
+  margin: 40px 0 0;
+}
+.container .main-content .containerTitle span {
+  margin-right: 15px;
 }
 .container .main-content .containerTitle .imgCountry {
   height: 35px;
-  margin-left: 15px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
 }
 .container .main-content .containerTitle .imgGlobal {
   height: 40px;
-  margin-left: 15px;
 }
 .container .main-content .data {
   width: 90%;
@@ -299,7 +303,7 @@
   justify-content: space-between;
   padding: 0 5px 0 25px;
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 30px;
   box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
   transition: 0.3s;
 }
@@ -579,6 +583,12 @@
     font-size: 14px;
     width: 58%;
     column-gap: 60px;
+  }
+  .container .main-content .containerTitle {
+    width: 70%;
+  }
+  .container .main-content .containerTitle .title {
+    margin: 40px 0 0;
   }
   .container .main-content .search {
     width: 60%;
@@ -880,6 +890,15 @@
   .container .main-content .update button {
     width: 60px;
   }
+  .container .main-content .containerTitle {
+    padding-bottom: 0;
+  }
+  .container .main-content .containerTitle .title {
+    margin-bottom: 0;
+  }
+  .container .main-content .containerTitle span {
+    margin-right: 15px;
+  }
   .container .main-content .data {
     padding: 0;
     font-size: 16px;
@@ -887,7 +906,7 @@
   }
   .container .main-content .search {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
   }
   .container .footer {
     padding: 0;

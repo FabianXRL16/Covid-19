@@ -42,6 +42,12 @@
         width: 58%;
         column-gap: 60px;
       }
+      .containerTitle{
+        width: 70%;
+        .title {
+          margin: 40px 0 0;
+        }
+      }
       .search {
         width: 60%;
       }
@@ -346,6 +352,15 @@
           width: 60px;
         }
       }
+      .containerTitle{
+        padding-bottom: 0;
+        .title {
+          margin-bottom: 0;
+        }
+        span{
+          margin-right: 15px;
+        }
+      }
       .data {
         padding: 0;
         font-size: 16px;
@@ -353,7 +368,7 @@
       }
       .search {
         width: 100%;
-        margin-top: 40px;
+        margin-top: 20px;
       }
     }
     .footer {

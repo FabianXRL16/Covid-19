@@ -43,12 +43,12 @@ function toShowSearch(obj, country) {
     obj.NewDeaths.toLocaleString();
   if (country) {
     document.getElementById("containerTitle").innerHTML = `
-        <h1 id="title" class="title">${obj.Country}
+        <h1 id="title" class="title"><span>${obj.Country}</span>
         <img id="imgCountry" class="imgCountry" src="https://flagcdn.com/${obj.CountryCode.toLowerCase()}.svg" alt=""></h1>
       `;
   } else {
     document.getElementById("containerTitle").innerHTML = `
-        <h1 id="title" class="title">Covid-19
+        <h1 id="title" class="title"><span>Covid-19</span>
         <img id="imgCountry" class="imgGlobal" src="./Assets//Img/global.svg" alt="Global"></h1>
       `;
   }
