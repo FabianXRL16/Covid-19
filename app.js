@@ -81,13 +81,20 @@ function search() {
   let findCountry = countries.filter((country) =>
     country.Slug.includes(inputValue)
   );
-  if(findCountry.length > 0){
+  if (findCountry.length > 0) {
     document.getElementById("title").innerText = findCountry[0].Country;
     toShowSearch(findCountry[0], true);
     savePrint(findCountry[0], true);
-  }else{
-    let msg = new Error("I'm sorry!!!, country not found")
-    console.error(msg)
+  } else {
+    let msg = new Error("I'm sorry!!!, country not found");
+    let toShowMsg = document.querySelector(".msg");
+    toShowMsg.style.transform = "translateY(0px)";
+    toShowMsg.style.transition = ".3s";
+    setTimeout(function () {
+      toShowMsg.style.transform = "translateY(-80px)";
+      toShowMsg.style.transition = ".3s";
+    }, 1500);
+    console.error(msg);
   }
 }
 
@@ -104,13 +111,13 @@ function convertWord(str) {
   return str.toLowerCase().trim().split(" ").join("-");
 }
 
-let inputEnter = document.querySelector('#findCountry');
+let inputEnter = document.querySelector("#findCountry");
 
-inputEnter.addEventListener('keyup', (e)=>{
-  if(e.keyCode === 13){
+inputEnter.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
     search();
   }
-})
+});
 
 function print() {
   date();
@@ -151,7 +158,7 @@ function mostAffected() {
   ul.innerHTML = li.join("");
 }
 
-function toShowBest(bestCountry){
+function toShowBest(bestCountry) {
   let findCountry = countries.filter((country) =>
     country.Slug.includes(bestCountry)
   );
