@@ -1,0 +1,29 @@
+@import "../vars.scss";
+
+.msg{
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: $bg-1;
+    width: 500px;
+    height: 80px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    color: $bg-4;
+    box-shadow: rgba($bg-5, 0.3) 0px 2px 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transform: translateY(-80px);
+    transition: .3s;
+    h1{
+        margin: 0;
+    }
+    i{
+        font-size: 28px;
+        line-height: 28px;
+    }
+}

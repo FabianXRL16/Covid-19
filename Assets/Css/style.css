@@ -544,6 +544,34 @@
   animation: 2s circle 0.5s ease-in;
 }
 
+.msg {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #FF005E;
+  width: 500px;
+  height: 80px;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  color: #e4e4e4;
+  box-shadow: rgba(23, 33, 38, 0.3) 0px 2px 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: translateY(-80px);
+  transition: 0.3s;
+}
+.msg h1 {
+  margin: 0;
+}
+.msg i {
+  font-size: 28px;
+  line-height: 28px;
+}
+
 @media (max-width: 1240px) {
   .canvas .canvas__container .medium-circle {
     bottom: -500px;
@@ -877,6 +905,16 @@
   .loader div {
     background-color: #e4e4e4;
   }
+
+  .msg {
+    width: 350px;
+  }
+  .msg h1 {
+    font-size: 18px;
+  }
+  .msg i {
+    font-size: 22px;
+  }
 }
 @media (max-width: 530px) {
   .container {
@@ -913,6 +951,16 @@
   }
   .container .footer ul {
     display: none;
+  }
+
+  .msg {
+    width: 250px;
+  }
+  .msg h1 {
+    font-size: 16px;
+  }
+  .msg i {
+    font-size: 20px;
   }
 }
 @keyframes loader {
